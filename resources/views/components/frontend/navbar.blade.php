@@ -16,13 +16,10 @@
             <a class="nav-link {{ ($active == "products") ? 'active' : '' }}" href="/products">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="/categories">Category</a>
+            <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="/#categories">Category</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-                  <a class="nav-link {{ ($active == "chart") ? 'active' : '' }}" href="/cart"><i class="bi bi-cart2"></i></a>
           </li>
         </ul>
         <div class="gap-3">
@@ -77,10 +74,7 @@
                 <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" href="/about">about</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="/categories">Category</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ ($active == "chart") ? 'active' : '' }}" href="/cart">Cart</a>
+                <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="#categories">Category</a>
               </li>
               <li class="nav-item pt-2">
 

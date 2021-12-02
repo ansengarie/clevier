@@ -39,11 +39,11 @@
       <!-- End Header -->
 
       <!-- Category -->
-      <section class="flex py-16 px-4 scrollspy" id="browse-the-room">
+      <section class="flex py-16 px-4 scrollspy">
         <div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
-          <div class="text-center title-text" id="#browse">
-            <h1 class="text-title story">BROWSE THE ROOM -</h1>
-            <p class="primary-header">
+          <div class="text-center title-text" >
+            <h1 class="text-title story" id="browse-the-room">BROWSE THE ROOM -</h1>
+            <p class="primary-header" id="categories">
               That we designed just for you
             </p>
           </div>
@@ -89,7 +89,7 @@
             <div class="card text-white" style="margin-top: 5px; margin-left: 0; padding: 0;">
               <img src="/img/catalog 1.png" class="card-img" alt="" style="height: 250px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
-                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Living Room</h5>
+                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">BedRoom</h5>
               </div>
             </div>
             </a>
@@ -99,7 +99,7 @@
             <div class="card text-white" style="margin-top: 5px; padding: 0px;">
               <img src="/img/catalog 1.png" class="card-img" alt="" style="height: 250px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
-                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Living Room</h5>
+                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Family Room</h5>
               </div>
             </div>
             </a>

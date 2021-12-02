@@ -17,4 +17,3 @@ use App\Http\Controllers\FrontendController;
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('products', [FrontendController::class, 'products'])->name('products');
-Route::get('categories', [FrontendController::class, 'categories'])->name('categories');
