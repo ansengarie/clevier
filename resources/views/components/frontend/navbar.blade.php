@@ -45,7 +45,7 @@
               </li>
             @else
             <li class="nav-item">
-              <a href="/login" class="nav-link btn btn-fill text-white {{ ($active == "login") ? 'active' : '' }}"> Login</a>
+              <a href="/login" class="nav-link btn-sm btn-fill text-white {{ ($active == "login") ? 'active' : '' }}"> Login</a>
               {{-- <button class="btn btn-default btn-no-fill">Log In</button> --}}
             </li>
           @endauth

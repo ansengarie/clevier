@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <title>Innerior</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-      <link rel="stylesheet" href="/css/content.css">
-      <link rel="stylesheet" href="/css/header.css">
+@extends('layouts/frontend')
+@section('container')
+    
 
-    </head>
-    <body>
     <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
       <div class="container-xxl mx-auto p-0  position-relative header-2-2" style="font-family: 'Poppins', sans-serif">
-        @include('components.frontend.navbar')
 
         <!-- Header -->
         <div>
@@ -24,9 +16,9 @@
                 Your <span class="text-field">Interiors</span> Dream
               </h1>
               <div class="d-flex flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-                <button class="btn d-inline-flex mb-md-0 btn-try text-white" href="">
+                <a class="btn d-inline-flex mb-md-0 btn-try text-white" href="#browse-the-room">
                   Explore Now
-                </button>
+                </a>
                 <button class="btn btn-outline">
                   <div class="d-flex align-items-center">
                     <svg class="me-2" width="13" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +31,7 @@
             </div>
             <!-- Right Column -->
             <div class="right-column text-center d-flex justify-content-center pe-0">
-              <img id="img-fluid" class="h-auto mw-100 rounded-3" src="/img/heroes.jpg" alt="" />
+              <img id="img-fluid" class="h-auto mw-100 shadow" style="border-radius: 6%" src="/img/heroes.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -47,9 +39,9 @@
       <!-- End Header -->
 
       <!-- Category -->
-      <section class="flex py-16 px-4" id="browse-the-room">
+      <section class="flex py-16 px-4 scrollspy" id="browse-the-room">
         <div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
-          <div class="text-center title-text">
+          <div class="text-center title-text" id="#browse">
             <h1 class="text-title story">BROWSE THE ROOM -</h1>
             <p class="primary-header">
               That we designed just for you
@@ -183,22 +175,20 @@
           
         
       <!-- Supported By -->
-      <div class="bg-light text-secondary px-4 py-2 text-center" style="margin-top: 30px;">
+      <div class="bg text-secondary px-4 py-2 text-center" style="margin-top: 30px;">
         <div class="py-1">
-          <h1 class="display-5 fw-bold" style="color: #00b4b4; font-size: 30px;">Supported By</h1>
+          <h1 class="display-5 fw-bold mt-5 mb-5" style="color: #00b4b4; font-size: 30px;">Our Partner</h1>
             <div class="row" style="margin: 0px; padding: 0px;">
-              <div class="col"><img src="/img/bootstrap.png" alt="" style="width: 50px; height: 60px;"></div>
-              <div class="col"><img src="/img/laravel.png" alt="" style="width: 50px; height: 60px;"></div>
-              <div class="col"><img src="/img/pinterest.png" alt="" style="width: 100px; height: 50px;"></div>
-              <div class="col"><img src="/img/google.png" alt="" style="width: 80px; height: 40px; margin-top: 10px;"></div>
-              <div class="col"><img src="/img/github.png" alt="" style="width: 50px; height: 50px;"></div>
-              <div class="col"><img src="/img/spotify.png" alt="" style="width: 75px; height: 50px;"></div>
+              <div class="col"><img src="/img/bootstrap.png" alt="" style="width: 50px; "></div>
+              <div class="col"><img src="/img/laravel.png" alt="" style="width: 50px; "></div>
+              <div class="col"><img src="/img/pinterest.png" alt="" style="width: 100px; "></div>
+              <div class="col"><img src="/img/google.png" alt="" style="width: 80px; "></div>
+              <div class="col"><img src="/img/github.png" alt="" style="width: 50px; "></div>
+              <div class="col"><img src="/img/spotify.png" alt="" style="width: 75px; "></div>
             </div>
         </div>
       </div>
       <!-- End Supported By -->
     </section> 
-    @include('components.frontend.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
-</html>
+
+@endsection
