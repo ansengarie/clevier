@@ -31,10 +31,6 @@
               alt="" />
           </div>
           <h3 class="title-text">Log In to continue</h3>
-          <p class="caption-text">
-            Please log in using that account has<br />
-            registered on the website.
-          </p>
 
           <main class="form-signin">
           <form style="margin-top: 1.5rem" action="" class="/login" method="post">

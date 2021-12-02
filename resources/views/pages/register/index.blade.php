@@ -1,7 +1,6 @@
 @extends('layouts.frontend')
 
 @section('container')
-    @endif
     <div class="content-3-5 d-flex flex-column align-items-center h-100 flex-lg-row"  
       style="font-family: 'Poppins', sans-serif">
       <div class="position-relative d-none d-lg-block h-100 width-left" >
