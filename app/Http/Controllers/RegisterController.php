@@ -11,7 +11,7 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('pages/register/register', [
+        return view('pages.register.index', [
             'title' => 'Register',
             'active' => 'register'
         ]);

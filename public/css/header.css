@@ -92,6 +92,18 @@
     font-size: 1.5rem;
     color: #00b4b4;
 }
+.text-caption-large-about {
+    font: 500 0.875rem/1.625 Poppins, sans-serif;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #00b4b4;
+}
+
+.text-caption-about {
+    font: 300 0.875rem/1.625 Poppins, sans-serif;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
 
 .header-2-2 .text-field {
     color: #00b4b4;
