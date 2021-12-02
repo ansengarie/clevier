@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,10 @@ use App\Http\Controllers\FrontendController;
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('products', [FrontendController::class, 'products'])->name('products');
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
