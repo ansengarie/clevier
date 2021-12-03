@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/content.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/product.css">
 
     <title>Innerior | {{ $title }}</title>
   </head>
