@@ -91,7 +91,7 @@
             </div>
             <div class="card-btn-space">
               <a href="/register#scroll-register"class="btn btn-card text-white">Register</a>
-              <a href="/login#scroll-login" class="btn btn-outline">Login</a>
+              <a href="/login#scroll-login" class="btn btn-card text-white">Login</a>
             </div>
           </div>
         </div>

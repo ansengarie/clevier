@@ -477,3 +477,16 @@
           width: 58.333333%;
         }
       }
+
+      /* Partners */
+.partners .bg {
+  background-color: #ececec;
+  margin-left: -110px;
+  margin-right: -110px;
+}
+
+.partners .row {
+  margin-right: 110px;
+  margin-left: 110px;
+  margin-bottom: 50px;
+}
