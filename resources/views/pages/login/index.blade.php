@@ -16,7 +16,7 @@
     @endif
 
     <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
-      <div class="content-3-5 d-flex flex-column align-items-center h-100 flex-lg-row" id="scroll-login"
+      <div class="content-3-5 d-flex flex-column align-items-center h-100 flex-lg-row" id="scroll"
         style="font-family: 'Poppins', sans-serif">
         <div class="position-relative d-none d-lg-block h-100 width-left">
           <img class="position-absolute img-fluid centered"

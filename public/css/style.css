@@ -515,3 +515,83 @@
   margin-bottom: 50px;
 }
 
+
+/* Testimonial */
+      .content-3-7 {
+        padding: 3rem 1rem 5rem;
+      }
+
+      .content-3-7 .card-item {
+        transition: 0.4s;
+        top: 0px;
+        left: 0px;
+        padding: 1rem 0;
+      }
+
+      .content-3-7 .card-item:hover {
+        top: -3px;
+        left: -3px;
+        transition: 0.4s;
+      }
+
+      .content-3-7 .card-item-outline {
+        border: 1px solid #00b4b4;
+        padding: 2rem 2.75rem;
+        border-radius: 1rem;
+      }
+
+      .content-3-7 .caption-text {
+        font: 400 1rem/1.5rem Poppins, sans-serif;
+        letter-spacing: 0.025em;
+        color: #8e8fad;
+        margin-bottom: 0;
+      }
+
+      .content-3-7 .text-title {
+        font: 500 1.18rem/1.55rem Poppins, sans-serif;
+        color: #039696;
+        letter-spacing: 0.025em;
+        margin-bottom: 0.15rem;
+      }
+
+      .content-3-7 .text-caption {
+        font: 400 0.9rem/1.8rem Poppins, sans-serif;
+        letter-spacing: 0.025em;
+        margin-bottom: 0.05rem;
+        color: #141c2e;
+      }
+
+      @media (min-width: 576px) {
+        .content-3-7 .title-text {
+          font: 800 2.25rem/2.5rem Poppins, sans-serif;
+        }
+
+        .content-3-7 .card-item {
+          padding: 1rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .content-3-7 {
+          padding-left: 3.5rem;
+          padding-right: 3.5rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .content-3-7 .caption-text {
+          width: 66.666667%;
+        }
+
+        .content-3-7 .card-item {
+          width: 33.333333%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .content-3-7 {
+          padding-left: 9rem;
+          padding-right: 9rem;
+        }
+      }
+
