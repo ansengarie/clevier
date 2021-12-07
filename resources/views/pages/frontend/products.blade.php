@@ -71,13 +71,13 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/img/catalog 1.png" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <img src="https://source.unsplash.com/300x225?interior" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
 
           <div class="card-body">
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group mx-auto">
-                <a href="/detail.blade.php"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/detail"><button type="button" class="btn btn-sm">View</button></a>
               </div>
             </div>
           </div>
@@ -85,13 +85,13 @@
       </div>
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/img/catalog 3.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <img src="https://source.unsplash.com/300x225?officeChair" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
 
           <div class="card-body">
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group mx-auto">
-                <a href="/detail.blade.php"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/detail"><button type="button" class="btn btn-sm">View</button></a>
               </div>
             </div>
           </div>
@@ -99,13 +99,13 @@
       </div>
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/img/catalog 2.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <img src="https://source.unsplash.com/300x225?vase" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
 
           <div class="card-body">
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group mx-auto">
-                <a href="/detail.blade.php"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/detail"><button type="button" class="btn btn-sm">View</button></a>
               </div>
             </div>
           </div>

@@ -42,8 +42,8 @@
       <section class="flex py-16 px-4 scrollspy">
         <div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
           <div class="text-center title-text" >
-            <h1 class="text-title story" id="browse-the-room">BROWSE THE ROOM -</h1>
-            <p class="primary-header" id="categories">
+            <h1 class="text-title story" id="categories">BROWSE THE ROOM -</h1>
+            <p class="primary-header">
               That we designed just for you
             </p>
           </div>
@@ -124,45 +124,45 @@
             <div class="row">
               <div class="col">
                 <div class="card">
-                  <img src="" class="card-img-top" alt="...">
+                  <img src="https://source.unsplash.com/300x200?cupboard" style="border-radius: 5%;" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Cupboard</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card">
-                  <img src="" class="card-img-top" alt="...">
+                  <img src="https://source.unsplash.com/300x200?desk" style="border-radius: 5%;" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Desk</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card">
-                  <img src="" class="card-img-top" alt="...">
+                  <img src="https://source.unsplash.com/300x200?bed" style="border-radius: 5%;" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Bed</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card">
-                  <img src="" class="card-img-top" alt="...">
+                  <img src="https://source.unsplash.com/300x200?table" style="border-radius: 5%;" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Table</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card">
-                  <img src="" class="card-img-top" alt="...">
+                  <img src="https://source.unsplash.com/300x200?sofa" style="border-radius: 5%;" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Sofa</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                 </div>
@@ -189,6 +189,50 @@
         </div>
       </div>
       <!-- End Supported By -->
+
+      <!-- Highlight -->
+      <section class="products">
+        <section class="porto">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12">
+                    <h4 class="headline">
+                        HIGHLIGHTS -
+                    </h4>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="sub-headline">
+                        Our platform specialize on helping our clients work process and communication. <br>
+                        Below are the products produced using our platform.
+                    </p>
+                </div>
+                <div class="col-md-2 text-md-right">
+                  <a href="/products" class="link btn d-inline-flex mb-md-0 btn-try text-white">
+                      See More
+                  </a>
+              </div>
+            </div>
+            <div class="row porto-img">
+                <div class="col-4">
+                    <img src="https://source.unsplash.com/400x600?interior" style="border-radius: 5%;"
+                        class="img-fluid" />
+                </div>
+                <div class="col-4 d-flex align-items-end flex-column">
+                    <img src="https://source.unsplash.com/400x280?interior" style="border-radius: 5%;"
+                        class="img-fluid">
+                    <img src="https://source.unsplash.com/400x280?designInterior" style="border-radius: 5%;"
+                        class="img-fluid mt-auto" />
+                </div>
+                <div class="col-4">
+                    <img src="https://source.unsplash.com/400x600?interiorDesign" style="border-radius: 5%;"
+                        class="img-fluid" />
+                </div>
+            </div>
+        </section>
+      </section>
+      <!-- End Highlights -->
     </section> 
 
 @endsection

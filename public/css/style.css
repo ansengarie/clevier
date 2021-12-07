@@ -478,7 +478,6 @@
         }
       }
 
-
       /* About */
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -501,3 +500,17 @@
       .social-icon:hover{
         color: #2ec49c;
       }
+
+      /* Partners */
+.partners .bg {
+  background-color: #ececec;
+  margin-left: -110px;
+  margin-right: -110px;
+}
+
+.partners .row {
+  margin-right: 110px;
+  margin-left: 110px;
+  margin-bottom: 50px;
+}
+

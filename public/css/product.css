@@ -82,3 +82,99 @@
   background-color: #00b4b4;
   color: #ffff;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+        
+* {
+  font-family: 'Poppins', 'Inter', sans-serif !important;
+}
+        
+body .porto {
+  background-color: #ffff;
+  padding: 50px 30px;
+}
+        
+@media only screen and (min-width: 768px) {
+  body .porto {
+  padding-top: 140px;
+  padding-bottom: 100px;
+}
+}
+        
+body .porto .headline {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00b4b4;
+  z-index: 1;
+  text-align: left;
+}
+        
+body .porto .link {
+  font: 700 1rem/1.5rem Poppins, sans-serif;
+  color: #ffff;
+  z-index: 1;
+  border-radius: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+        
+body .porto .sub-headline {
+  padding-top: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #888888;
+  z-index: 1;
+}
+        
+@media only screen and (min-width: 768px) {
+  body .porto .sub-headline {
+    font-size: 20px;
+  }
+}
+        
+body .porto .porto-img {
+  margin-top: 45px;
+}
+        
+body .porto .porto-img div {
+  z-index: 1;
+}
+        
+@media only screen and (min-width: 768px) {
+  body .porto .porto-img {
+    margin-top: 96px;
+  }
+}
+        
+body .porto .porto-img-full {
+  z-index: 1;
+}
+        
+@media only screen and (max-width: 768px) {
+  body .porto .porto-img-full {
+    width: 100px !important;
+  }
+}
+        
+body .porto .porto-img-half {
+  z-index: 1;
+}
+        
+@media only screen and (max-width: 768px) {
+  body .porto .porto-img-half {
+    height: 70px !important;
+  }
+}
+        
+body .cl-light {
+  color: #EEEEEE;
+}
+
+body .cl-light-grey-2 {
+  color: #90BCB7;
+}
+
+body .font-lora {
+  font-family: 'Lora', sans-serif !important;
+}
