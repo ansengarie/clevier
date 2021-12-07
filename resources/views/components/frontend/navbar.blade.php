@@ -44,7 +44,7 @@
             </li>
             @else
             <li class="nav-item">
-              <a href="/login#scroll-login" class="nav-link btn-sm btn-fill text-white {{ ($active == "login") ? 'active' : '' }}"> Login</a>
+              <a href="/login#scroll" class="nav-link btn-sm btn-fill text-white {{ ($active == "login") ? 'active' : '' }}"> Login</a>
               {{-- <button class="btn btn-default btn-no-fill">Log In</button> --}}
             </li>
             @endauth
@@ -67,22 +67,22 @@
             </a>
             <ul class="navbar-nav responsive me-auto mt-0 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "home") ? 'active' : '' }}" href="/">Home</a>
+                <a class="nav-link {{ ($active == "home") ? 'active' : '' }}" style="color: #008585;" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "products") ? 'active' : '' }}" href="/products">Product</a>
+                <a class="nav-link {{ ($active == "products") ? 'active' : '' }}" style="color: #008585;" href="/products">Product</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" href="/about">about</a>
+                <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" style="color: #008585;" href="/about">about</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="#categories">Category</a>
+                <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" style="color: #008585;" href="#categories">Category</a>
               </li>
               <li class="nav-item pt-2">
                 @auth
-                <i class="bi bi-person-circle"> {{ auth()->user()->name }}</i> 
+                <i class="bi bi-person-circle"> </i>  {{ auth()->user()->name }}
               <li class="nav-item">
-                <a class="nav-link" href="/dashboard">My Dashboard</a>
+                <a class="nav-link" href="/dashboard" style="color: #008585;">My Dashboard</a>
               </li>
               <li class="nav-item ms-auto pb-3">
                 <form action="/logout" method="post">
@@ -92,7 +92,7 @@
               </li>
               @else
               <li class="nav-item">
-                <a href="/login#scroll-login" class="nav-link btn btn-fill text-white ms-auto mb-3 {{ ($active == "login") ? 'active' : '' }}"> Login</a>
+                <a href="/login#scroll" class="nav-link btn btn-fill text-white ms-auto mb-3 {{ ($active == "login") ? 'active' : '' }}"> Login</a>
               </li>
               @endauth
             </ul>

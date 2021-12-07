@@ -1,10 +1,7 @@
 @extends('layouts/frontend')
 @section('container')
-    
-
     <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
-      <div class="container-xxl mx-auto p-0  position-relative header-2-2" style="font-family: 'Poppins', sans-serif">
-
+      <div class="container-xxl mx-auto p-0  position-relative header-2-2">
         <!-- Header -->
         <div>
           <div class="mx-auto d-flex flex-lg-row flex-column hero">
@@ -52,31 +49,29 @@
       <div class="container">
         <div class="row">
           <!-- foreach ($categories as $category) -->
-          <div class="col-sm-8">
+          <div class="col-sm-6">
             <a>
             <div class="card text-white" style="margin-bottom: 5px;">
-              <img src="/img/catalog 1.png" class="card-img" alt="" style="height: 250px; opacity: 60%;">
+              <img src="/img/catalog 1.png" class="card-img" alt="" style="height: 300px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
                 <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Living Room</h5>
               </div>
             </div>
             </a>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <a>
             <div class="card text-white" style="color: #00b4b4; margin-bottom: 5px;">
-              <img src="/img/catalog 2.jpg" class="card-img" alt="" style="height: 250px; opacity: 60%;">
+              <img src="/img/catalog 2.jpg" class="card-img" alt="" style="height: 300px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
                 <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Kitchen</h5>
               </div>
             </div>
             </a>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm">
+          <div class="col-sm-4">
             <a>
-            <div class="card text-white" style="margin-top: 5px; margin-left: 0; padding: 0;">
+            <div class="card text-white" style="margin-top: 10px; margin-left: 0; padding: 0;">
               <img src="/img/catalog 3.jpg" class="card-img" alt="" style="height: 250px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
                 <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Bathroom</h5>
@@ -84,9 +79,9 @@
             </div>
             </a>
           </div>
-          <div class="col-sm">
+          <div class="col-sm-4">
             <a>
-            <div class="card text-white" style="margin-top: 5px; margin-left: 0; padding: 0;">
+            <div class="card text-white" style="margin-top: 10px; margin-left: 0; padding: 0;">
               <img src="/img/catalog 1.png" class="card-img" alt="" style="height: 250px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
                 <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">BedRoom</h5>
@@ -94,9 +89,9 @@
             </div>
             </a>
           </div>
-          <div class="col-sm">
+          <div class="col-sm-4">
             <a>
-            <div class="card text-white" style="margin-top: 5px; padding: 0px;">
+            <div class="card text-white" style="margin-top: 10px; padding: 0px;">
               <img src="/img/catalog 1.png" class="card-img" alt="" style="height: 250px; opacity: 60%;">
               <div class="card-img-overlay d-flex align-items-center p-0">
                 <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(43, 248, 255, 0.555)">Family Room</h5>
@@ -104,67 +99,77 @@
             </div>
             </a>
           </div>
-          <!-- endforeach -->
         </div>
+          <!-- endforeach -->
       </div>
       <!-- End Category -->
 
 
       <!-- Just Arrived -->
-      <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
-        <div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
-          <div class="text-center title-text">
+      <section class="flex py-16 px-4 scrollspy">
+        <div class="content-2-2 container-xxl mx-auto p-0  position-relative">
+          <div class="text-center title-text" >
             <h1 class="text-title story">JUST ARRIVED -</h1>
             <p class="primary-header">
               This summer for you
             </p>
           </div>
-    
-          <div class="grid text-center">
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <img src="https://source.unsplash.com/300x200?cupboard" style="border-radius: 5%;" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Cupboard</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
+        </div>
+      </section>
+      <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
+        <div class="grid text-center">
+          <div class="row">
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="https://source.unsplash.com/300x200?cupboard" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cupboard</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <img src="https://source.unsplash.com/300x200?desk" style="border-radius: 5%;" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Desk</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
+            </div>
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="https://source.unsplash.com/300x200?desk"  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Desk</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <img src="https://source.unsplash.com/300x200?bed" style="border-radius: 5%;" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Bed</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
+            </div>
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="https://source.unsplash.com/300x200?bed"  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bed</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <img src="https://source.unsplash.com/300x200?table" style="border-radius: 5%;" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Table</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
+            </div>
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="https://source.unsplash.com/300x200?table" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Table</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <img src="https://source.unsplash.com/300x200?sofa" style="border-radius: 5%;" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Sofa</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
+            </div>
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="https://source.unsplash.com/300x200?sofa" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sofa</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-3">
+              <div class="card">
+                <img src="https://source.unsplash.com/300x200?chair" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">chair</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
             </div>
@@ -173,66 +178,141 @@
       </section> 
       <!-- End Just Arrived -->
           
-        
-      <!-- Supported By -->
-      <div class="bg text-secondary px-4 py-2 text-center" style="margin-top: 30px;">
-        <div class="py-1">
-          <h1 class="display-5 fw-bold mt-5 mb-5" style="color: #00b4b4; font-size: 30px;">Our Partner</h1>
-            <div class="row" style="margin: 0px; padding: 0px;">
-              <div class="col"><img src="/img/bootstrap.png" alt="" style="width: 50px; "></div>
-              <div class="col"><img src="/img/laravel.png" alt="" style="width: 50px; "></div>
-              <div class="col"><img src="/img/pinterest.png" alt="" style="width: 100px; "></div>
-              <div class="col"><img src="/img/google.png" alt="" style="width: 80px; "></div>
-              <div class="col"><img src="/img/github.png" alt="" style="width: 50px; "></div>
-              <div class="col"><img src="/img/spotify.png" alt="" style="width: 75px; "></div>
-            </div>
-        </div>
-      </div>
-      <!-- End Supported By -->
-
       <!-- Highlight -->
       <section class="products">
         <section class="porto">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-12">
-                    <h4 class="headline">
+            <div class="row d-flex align-content-center">
+                <div class="col-sm-12">
+                    <h3 class="headline">
                         HIGHLIGHTS -
-                    </h4>
+                    </h3>
                 </div>
-                
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col-sm-10">
                     <p class="sub-headline">
                         Our platform specialize on helping our clients work process and communication. <br>
                         Below are the products produced using our platform.
                     </p>
                 </div>
-                <div class="col-md-2 text-md-right">
-                  <a href="/products" class="link btn d-inline-flex mb-md-0 btn-try text-white">
+                <div class="col-sm-2 d-flex">
+                  <a href="/products" class="link btn btn-fill text-white">
                       See More
                   </a>
               </div>
             </div>
             <div class="row porto-img">
-                <div class="col-4">
-                    <img src="https://source.unsplash.com/400x600?interior" style="border-radius: 5%;"
-                        class="img-fluid" />
+                <div class="col-md-4">
+                    <img src="https://source.unsplash.com/400x600?furniture" style="border-radius: 5%;"
+                        class="img-fluid mb-3" />
                 </div>
-                <div class="col-4 d-flex align-items-end flex-column">
+                <div class="col-md-4 d-flex align-items-end flex-column">
                     <img src="https://source.unsplash.com/400x280?interior" style="border-radius: 5%;"
-                        class="img-fluid">
+                        class="img-fluid mb-3">
                     <img src="https://source.unsplash.com/400x280?designInterior" style="border-radius: 5%;"
-                        class="img-fluid mt-auto" />
+                        class="img-fluid mt-auto mb-3" />
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <img src="https://source.unsplash.com/400x600?interiorDesign" style="border-radius: 5%;"
-                        class="img-fluid" />
+                        class="img-fluid mb-3" />
                 </div>
             </div>
         </section>
       </section>
       <!-- End Highlights -->
-    </section> 
 
+      <!--Testimonial-->
+      <?php
+      $faker = Faker\Factory::create();  /// For random names of testimonials
+      ?>
+      <section class="h-100 w-100" style="box-sizing: border-box;">
+      <div class="content-3-7 overflow-hidden container-xxl mx-auto position-relative"
+      style="font-family: 'Poppins', sans-serif">
+      <div class="container mx-auto">
+        <div class="text-center title-text" >
+            <h4 class="fw-bold mb-4" style="color: #00b4b4; font-size:23px;">TESTIMONIALS</h4>
+        </div>
+        <div class="d-flex flex-wrap">
+          <div class="mx-auto card-item position-relative">
+            <div class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100 text-center">
+              <img class="bd-placeholder-img rounded-circle mb-3" width="170" src="https://fakeface.rest/thumb/view?minimum_age=30" alt="alt text" title="Dynamically generated image" style="margin-top:0.2rem; margin-left:auto; margin-right:auto">
+              <h2 class="text-title mb-1">{{ $faker->name }}</h2>
+              <p class="caption-text mx-auto mb-2">
+                <i class="bi bi-geo-alt-fill"></i>{{ $faker-> country }}
+              </p>
+              <p class="text-caption">
+                <?php
+                  $data = file_get_contents("https://testimonialapi.toolcarton.com/api/9");
+                  $testi = json_decode($data, TRUE);
+                ?>
+                {{ $testi['message'] }}
+              </p>
+            </div>
+          </div>
+          <div class="mx-auto card-item position-relative">
+            <div class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100 text-center">
+              <img class="bd-placeholder-img rounded-circle mb-3" width="170" src="https://fakeface.rest/face/view?gender=female&minimum_age=18" alt="alt text" title="Dynamically generated image" style="margin-top:0.2rem; margin-left:auto; margin-right:auto">
+              <h2 class="text-title mb-1">{{ $faker->name }}</h2>
+              <p class="caption-text mx-auto mb-2">
+                <i class="bi bi-geo-alt-fill"></i>{{ $faker-> country }}
+              </p>
+              <p class="text-caption">
+                <?php
+                  $data = file_get_contents("https://testimonialapi.toolcarton.com/api/10");
+                  $testi = json_decode($data, TRUE);
+                ?>
+                {{ $testi['message'] }}
+              </p>
+            </div>
+          </div>
+          <div class="mx-auto card-item position-relative">
+            <div class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100 text-center">
+              <img class="bd-placeholder-img rounded-circle mb-3" width="170" src="https://fakeface.rest/thumb/view/20?minimum_age=16" alt="alt text" title="Dynamically generated image" style="margin-top:0.2rem; margin-left:auto; margin-right:auto">
+              <h2 class="text-title mb-1">{{ $faker->name }}</h2>
+              <p class="caption-text mx-auto mb-2">
+                <i class="bi bi-geo-alt-fill"></i>{{ $faker-> country }}
+              </p>
+              <p class="text-caption">
+                <?php
+                  $data = file_get_contents("https://testimonialapi.toolcarton.com/api/4");
+                  $testi = json_decode($data, TRUE);
+                ?>
+                {{ $testi['message'] }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section> 
+    <!-- End Testimonial -->
+
+    <!-- OUR PARTNER -->
+    <div class="bg text-secondary px-4 py-2 text-center">
+      <div class="py-1">
+        <h4 class="fw-bold mb-5" style="color: #00b4b4; font-size:23px;">OUR PARTNER</h4>
+          <div class="row" style="margin: 0px; padding: 0px;">
+            <div class="col-md-2 mb-4">
+              <img src="/img/bootstrap.png" alt="" style="width: 50px; ">
+            </div>
+            <div class="col-md-2 mb-4">
+              <img src="/img/laravel.png" alt="" style="width: 70px; ">
+            </div>
+            <div class="col-md-2 mb-4">
+              <img src="/img/pinterest.png" alt="" style="width: 120px; ">
+            </div>
+            <div class="col-md-2 mb-4">
+              <img src="/img/google.png" alt="" style="width: 80px; ">
+            </div>
+            <div class="col-md-2 mb-4">
+              <img src="/img/github.png" alt="" style="width: 60px; ">
+            </div>
+            <div class="col-md-2 mb-4">
+              <img src="/img/spotify.png" alt="" style="width: 100px; ">
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- End OUR PARTNER -->
+  </section> 
 @endsection

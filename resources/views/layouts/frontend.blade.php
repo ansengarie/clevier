@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/product.css">
 
+    {{-- Icon Website --}}
+    <link rel="icon" href="\img\logo\innerior-icon.png">
+
     <title>Innerior | {{ $title }}</title>
   </head>
   <body>

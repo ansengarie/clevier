@@ -12,34 +12,32 @@
       </div>
       <div class="carousel-inner" style="width: 100%;">
         <div class="carousel-item active overflow-hidden shadow p-3 bg-body">
-          <img src="/img/carousel1.jpg" style="height: 250px; opacity: 50%;" class="bd-placeholder-img shadow" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="/img/carousel1.jpg" style="height: 450px; opacity: 50%; border-radius: 1%" class="bd-placeholder-img shadow" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
           <div class="container">
-            <div class="carousel-caption text-start">
-              <div class="my-3 p-3">
+            <div class="carousel-caption justify-content-left my-5">
                 <h3 style="color: rgb(0, 0, 0);">“Your Home should tell the story of who you are, and be a Collection of what you Love.”</h3>
                 <h6 style="color: #00b4b4;">― Nate Berkus, The Things That Matter</h6>
                 <a class="btn mt-4" style="margin-bottom: -15px;" href="#products">Let's Explore!</a>
-              </div>
             </div>
           </div>
         </div>
         <div class="carousel-item overflow-hidden shadow p-3 bg-body">
-          <img src="/img/carousel.jpg" style="height: 250px; opacity: 50%;" class="bd-placeholder-img" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="/img/carousel.jpg" style="height: 450px; opacity: 50%; border-radius: 1%" class="bd-placeholder-img" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
           <div class="container">
-            <div class="carousel-caption">
+            <div class="carousel-caption justify-content-left my-5">
               <h3 style="color: rgb(0, 0, 0);">“Our interiors are an insight into our brains. It is a collaboration of design, art, humor, irony, functionality, and the street.”</h3>
-              <h6 style="color: rgb(0, 0, 0);">― Amanda Talbot, Rethink: The Way You Live</h6>
-              <a class="btn mt-4" href="#products">Let's Explore</a>
+              <h6 style="color: #00b4b4;">― Amanda Talbot, Rethink: The Way You Live</h6>
+              <a class="btn mt-4" style="margin-bottom: -15px;" href="#products">Let's Explore!</a>
             </div>
           </div>
         </div>
         <div class="carousel-item overflow-hidden shadow p-3 bg-body">
-          <img src="/img/carousel2.jpg" style="height: 250px; opacity: 50%;" class="bd-placeholder-img" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="/img/carousel2.jpg" style="height: 450px; opacity: 50%; border-radius: 1%" class="bd-placeholder-img" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
           <div class="container">
-            <div class="carousel-caption text-end">
-              <h3 style="color: rgb(0, 0, 0);" class="mb-5">“Clever design converts and changes according to need.”</h3>
+            <div class="carousel-caption justify-content-right my-5">
+              <h3 style="color: rgb(0, 0, 0);">“Clever design converts and changes according to need.”</h3>
               <h6 style="color: rgb(0, 0, 0);">― Amanda Talbot, Rethink: The Way You Live</h6>
-              <a class="btn mt-4" href="#products">Let's Explore</a>
+              <a class="btn mt-4" style="margin-bottom: -15px;" href="#products">Let's Explore!</a>
             </div>
           </div>
         </div>
@@ -58,7 +56,7 @@
 <!-- Carousel -->
 
 <!-- All Products -->
-<div class="album py-5">
+<div class="album py-3">
   <div class="container">
     <div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
       <div class="text-center title-text" >
