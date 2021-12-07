@@ -20,7 +20,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('products', [FrontendController::class, 'products'])->name('products');
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
