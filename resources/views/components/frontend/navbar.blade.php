@@ -22,22 +22,22 @@
             <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" href="/about">About</a>
           </li>
         </ul>
-        <div class="gap-3">
+        <div class="d-flex">
           <ul class="navbar-nav ms-auto">
             @auth
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle"> </i> {{ auth()->user()->name }}
+                <i class="bi bi-person-circle"> {{ auth()->user()->name }}</i> 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li>
+                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse">  Dashboard</i></a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li>
                   <form action="/logout" method="post">
                     @csrf
-                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>Logout</button>
+                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right">  Logout</i></button>
                   </form>
                 </li>
               </ul>
@@ -48,7 +48,7 @@
               {{-- <button class="btn btn-default btn-no-fill">Log In</button> --}}
             </li>
             @endauth
-          </ul>
+        </ul>
         </div>
       </div>
     </nav>
@@ -79,26 +79,22 @@
                 <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="#categories">Category</a>
               </li>
               <li class="nav-item pt-2">
-
                 @auth
-                {{ auth()->user()->name }}
+                <i class="bi bi-person-circle"> {{ auth()->user()->name }}</i> 
               <li class="nav-item">
                 <a class="nav-link" href="/dashboard">My Dashboard</a>
               </li>
               <li class="nav-item ms-auto pb-3">
                 <form action="/logout" method="post">
                   @csrf
-                  <button type="submit" style="margin-left:auto; margin-right:auto;" class="btn btn-fill-logout text-white mb-3"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                  <button type="submit" style="margin-left:auto; margin-right:auto; background-color: #ee2105;" class="btn btn-fill text-white mb-3"><i class="bi bi-box-arrow-right"></i> Logout</button>
                 </form>
               </li>
-
               @else
               <li class="nav-item">
                 <a href="/login#scroll-login" class="nav-link btn btn-fill text-white ms-auto mb-3 {{ ($active == "login") ? 'active' : '' }}"> Login</a>
-                {{-- <button class="btn btn-default btn-no-fill">Log In</button> --}}
               </li>
               @endauth
-
             </ul>
           </div>
         </div>

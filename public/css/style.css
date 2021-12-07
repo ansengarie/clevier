@@ -319,13 +319,14 @@
 
       .content-3-5 .width-left {
         width: 0%;
+        background-color: #99fafa;
       }
 
       .content-3-5 .width-right {
         width: 100%;
         height: 100%;
-        padding: 8rem 2rem;
-        background-color: #fcfdff;
+        padding: 10rem 2rem;
+        background-color: #ffffff;
       }
 
       .content-3-5 .centered {
@@ -370,7 +371,7 @@
       }
 
       .content-3-5 .div-input input::placeholder {
-        color: #cacbce;
+        color: #ffffff;
         transition: 0.3s;
       }
 
@@ -390,7 +391,7 @@
       .content-3-5 .input-field {
         font: 300 1rem/1.5rem Poppins, sans-serif;
         width: 100%;
-        background-color: #fcfdff;
+        background-color: #ffffff;
         transition: 0.3s;
       }
 
