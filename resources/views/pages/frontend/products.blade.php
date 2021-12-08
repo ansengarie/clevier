@@ -77,7 +77,8 @@
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group mx-auto">
-                <a href="/detail"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/details" style="padding-right: 5px;"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/details"><button type="button" class="btn btn-sm">Add</button></a>
               </div>
             </div>
           </div>
@@ -91,7 +92,8 @@
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group mx-auto">
-                <a href="/detail"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/details" style="padding-right: 5px;"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/details"><button type="button" class="btn btn-sm">Add</button></a>
               </div>
             </div>
           </div>
@@ -105,7 +107,8 @@
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group mx-auto">
-                <a href="/detail"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/details" style="padding-right: 5px;"><button type="button" class="btn btn-sm">View</button></a>
+                <a href="/details"><button type="button" class="btn btn-sm">Add</button></a>
               </div>
             </div>
           </div>
