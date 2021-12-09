@@ -223,11 +223,10 @@
 
       <!--Testimonial-->
       <?php
-      $faker = Faker\Factory::create();  /// For random names of testimonials
+      $faker = Faker\Factory::create();  /// For random names & countries of testimonials
       ?>
       <section class="h-100 w-100" style="box-sizing: border-box;">
-      <div class="content-3-7 overflow-hidden container-xxl mx-auto position-relative"
-      style="font-family: 'Poppins', sans-serif">
+      <div class="content-3-7 overflow-hidden container-xxl mx-auto position-relative">
       <div class="container mx-auto">
         <div class="text-center title-text" >
             <h4 class="fw-bold mb-4" style="color: #00b4b4; font-size:23px;">TESTIMONIALS</h4>
@@ -242,8 +241,10 @@
               </p>
               <p class="text-caption">
                 <?php
-                  $data = file_get_contents("https://testimonialapi.toolcarton.com/api/9");
-                  $testi = json_decode($data, TRUE);
+                  $rand = strval(rand(1, 10));
+                  $testi = "https://testimonialapi.toolcarton.com/api/" . $rand;
+                  $testi = file_get_contents($testi);
+                  $testi = json_decode($testi, TRUE);
                 ?>
                 {{ $testi['message'] }}
               </p>
@@ -258,8 +259,10 @@
               </p>
               <p class="text-caption">
                 <?php
-                  $data = file_get_contents("https://testimonialapi.toolcarton.com/api/10");
-                  $testi = json_decode($data, TRUE);
+                  $rand = strval(rand(1, 10));
+                  $testi = "https://testimonialapi.toolcarton.com/api/" . $rand;
+                  $testi = file_get_contents($testi);
+                  $testi = json_decode($testi, TRUE);
                 ?>
                 {{ $testi['message'] }}
               </p>
@@ -274,8 +277,10 @@
               </p>
               <p class="text-caption">
                 <?php
-                  $data = file_get_contents("https://testimonialapi.toolcarton.com/api/4");
-                  $testi = json_decode($data, TRUE);
+                  $rand = strval(rand(1, 10));
+                  $testi = "https://testimonialapi.toolcarton.com/api/" . $rand;
+                  $testi = file_get_contents($testi);
+                  $testi = json_decode($testi, TRUE);
                 ?>
                 {{ $testi['message'] }}
               </p>
@@ -290,25 +295,25 @@
     <!-- OUR PARTNER -->
     <div class="bg text-secondary px-4 py-2 text-center">
       <div class="py-1">
-        <h4 class="fw-bold mb-5" style="color: #00b4b4; font-size:23px;">OUR PARTNER</h4>
+        <h4 class="fw-bold mb-4" style="color: #00b4b4; font-size:23px;">OUR PARTNER</h4>
           <div class="row" style="margin: 0px; padding: 0px;">
             <div class="col-md-2 mb-4">
-              <img src="/img/bootstrap.png" alt="" style="width: 50px; ">
+              <img src="//logo.clearbit.com/laravel.com?size=100" style="filter: opacity(60%);">
             </div>
             <div class="col-md-2 mb-4">
-              <img src="/img/laravel.png" alt="" style="width: 70px; ">
+              <img src="//logo.clearbit.com/google.com?size=100" style="filter: opacity(60%);">
             </div>
             <div class="col-md-2 mb-4">
-              <img src="/img/pinterest.png" alt="" style="width: 120px; ">
+              <img src="//logo.clearbit.com/github.com?size=100" style="filter: opacity(60%);">
             </div>
             <div class="col-md-2 mb-4">
-              <img src="/img/google.png" alt="" style="width: 80px; ">
+              <img src="//logo.clearbit.com/unsplash.com?size=120" style="filter: opacity(60%);">
             </div>
             <div class="col-md-2 mb-4">
-              <img src="/img/github.png" alt="" style="width: 60px; ">
+              <img src="//logo.clearbit.com/php.net?size=120" style="filter: opacity(60%);">
             </div>
             <div class="col-md-2 mb-4">
-              <img src="/img/spotify.png" alt="" style="width: 100px; ">
+              <img src="//logo.clearbit.com/getbootstrap.com?size=90" style="filter: opacity(60%);">
             </div>
           </div>
       </div>

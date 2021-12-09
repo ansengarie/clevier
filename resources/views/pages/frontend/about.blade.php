@@ -88,50 +88,50 @@
         </div>
       </div>
 
-          <!--- Our Team --->
-        <div class="content-2-2 container-xxl mx-auto p-0  position-relative">
-          <div class="text-center title-text">
-            <h4 class="fw-bold mb-2" style="color: #00b4b4; font-size:27px;">OUR TEAM</h4>
+      <!--- Our Team --->
+      <div class="content-2-2 container-xxl mx-auto p-0  position-relative">
+        <div class="text-center title-text">
+          <h4 class="fw-bold mb-2" style="color: #00b4b4; font-size:27px;">OUR TEAM</h4>
+        </div>
+        <div class="row mb-5">
+          <div class="col-lg-3 d-flex flex-column align-items-center text-center">
+            <img class="bd-placeholder-img rounded-circle mb-3" width="160" src="/img/team/aji.png">
+            <h5>Aji Nuansa Sengarie</h5>
+            <h5 style="color:#00b4b4;">Leader</h5>
+            <div class="social-links mb-5" style="font-size: 25px">
+              <a href="https://www.instagram.com/ajins_/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/ansengarie" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
+            </div>
           </div>
-          <div class="row mb-5">
-            <div class="col-lg-3 d-flex flex-column align-items-center text-center">
-              <img class="bd-placeholder-img rounded-circle mb-3" width="160" src="/img/team/aji.png">
-              <h5>Aji Nuansa Sengarie</h5>
-              <h5 style="color:#00b4b4;">Leader</h5>
-              <div class="social-links mb-5" style="font-size: 25px">
-                <a href="https://www.instagram.com/ajins_/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/ansengarie" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
-              </div>
+          <div class="col-lg-3 d-flex flex-column align-items-center text-center">
+            <img class="bd-placeholder-img rounded-circle mb-3" width="160" src="/img/team/fauzan.png">
+            <h5>Fauzan Nursalma</h5>
+            <h5 style="color:#00b4b4;">Frontend</h5>
+            <div class="social-links mb-5" style="font-size: 25px">
+              <a href="https://www.instagram.com/fauzannursalma/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/fauzannursalma" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
             </div>
-            <div class="col-lg-3 d-flex flex-column align-items-center text-center">
-              <img class="bd-placeholder-img rounded-circle mb-3" width="160" src="/img/team/fauzan.png">
-              <h5>Fauzan Nursalma</h5>
-              <h5 style="color:#00b4b4;">Frontend</h5>
-              <div class="social-links mb-5" style="font-size: 25px">
-                <a href="https://www.instagram.com/fauzannursalma/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/fauzannursalma" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
-              </div>
+          </div>
+          <div class="col-lg-3 d-flex flex-column align-items-center text-center">
+            <img class="bd-placeholder-img rounded-circle mb-3" target="_blank" width="160" src="/img/team/salsa.png">
+            <h5>Salsabila Nada</h5>
+            <h5 style="color:#00b4b4;">Frontend</h5>
+            <div class="social-links mb-5" style="font-size: 25px">
+              <a href="https://www.instagram.com/salsnadaa/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/salsabilanada16" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
             </div>
-            <div class="col-lg-3 d-flex flex-column align-items-center text-center">
-              <img class="bd-placeholder-img rounded-circle mb-3" target="_blank" width="160" src="/img/team/salsa.png">
-              <h5>Salsabila Nada</h5>
-              <h5 style="color:#00b4b4;">Frontend</h5>
-              <div class="social-links mb-5" style="font-size: 25px">
-                <a href="https://www.instagram.com/salsnadaa/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/salsabilanada16" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-3 d-flex flex-column align-items-center text-center">
-              <img class="bd-placeholder-img rounded-circle mb-3" width="160" src="/img/team/rio.png">
-              <h5>Rio Alifian Santoso</h5>
-              <h5 style="color:#00b4b4;">Backend</h5>
-              <div class="social-links mb-5" style="font-size: 25px">
-                <a href="https://www.instagram.com/rioalifian12/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/rioalifian12" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
-              </div>
+          </div>
+          <div class="col-lg-3 d-flex flex-column align-items-center text-center">
+            <img class="bd-placeholder-img rounded-circle mb-3" width="160" src="/img/team/rio.png">
+            <h5>Rio Alifian Santoso</h5>
+            <h5 style="color:#00b4b4;">Backend</h5>
+            <div class="social-links mb-5" style="font-size: 25px">
+              <a href="https://www.instagram.com/rioalifian12/" target="_blank" class="instagram social-icon"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/rioalifian12" target="_blank" class="github social-icon"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
+      </div>
           
       <!-- Contact Us-->
       <div class="content-2-2 container-xxl mx-auto p-0  position-relative">

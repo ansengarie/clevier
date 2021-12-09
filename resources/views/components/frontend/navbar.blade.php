@@ -23,32 +23,51 @@
           </li>
         </ul>
         <div class="d-flex">
-          <ul class="navbar-nav ms-auto">
-            @auth
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle"> {{ auth()->user()->name }}</i> 
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse">  Dashboard</i></a></li>
-                <li>
-                  <hr class="dropdown-divider">
+            <ul class="navbar-nav ms-auto">
+                @auth
+                <div class="nav-item dropdown pe-3 ms-auto">
+                  <a class="nav-link nav-profile d-flex align-items-center pe-0" style="color:black" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="d-none d-md-block dropdown-toggle ps-2">{{ auth()->user()->name }}</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header" style="text-align:center;">
+                      <i class="bi bi-person-circle" style="font-size: 3rem;" ></i>
+                      <h6>{{ auth()->user()->name }}</h6>
+                      <span>User</span> <!--Ini kalo bisa otomatis sesuai rolem, admin atau user -->
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center" href="/dashboard">
+                        <i class="bi bi-grid"></i>
+                        <span class="px-2"> Dashboard</span>
+                      </a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center" href="/">
+                        <form action="/logout" method="post">
+                          @csrf
+                          <button type="submit" style="background-color: #ee2105;" class="btn btn-default text-white">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span class="px-2">Logout</span>
+                          </button>
+                        </form>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                @else
+                <li class="nav-item">
+                  <a href="/login#scroll" class="nav-link btn-sm btn-fill text-white {{ ($active == "login") ? 'active' : '' }}"> Login</a>
+                  {{-- <button class="btn btn-default btn-no-fill">Log In</button> --}}
                 </li>
-                <li>
-                  <form action="/logout" method="post">
-                    @csrf
-                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right">  Logout</i></button>
-                  </form>
-                </li>
-              </ul>
-            </li>
-            @else
-            <li class="nav-item">
-              <a href="/login#scroll" class="nav-link btn-sm btn-fill text-white {{ ($active == "login") ? 'active' : '' }}"> Login</a>
-              {{-- <button class="btn btn-default btn-no-fill">Log In</button> --}}
-            </li>
-            @endauth
-        </ul>
+                @endauth
+            </ul>
         </div>
       </div>
     </nav>

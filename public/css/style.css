@@ -309,8 +309,6 @@
 				}
 			}
 
-  
-
    /* login */
       .content-3-5 .btn:focus,
       .content-3-5 .btn:active {
@@ -502,21 +500,23 @@
         color: #2ec49c;
       }
 
-      /* Partners */
-.partners .bg {
-  background-color: #ececec;
-  margin-left: -110px;
-  margin-right: -110px;
-}
+      
 
-.partners .row {
-  margin-right: 110px;
-  margin-left: 110px;
-  margin-bottom: 50px;
-}
+    /* Partners */
+    .partners .bg {
+      background-color: #ececec;
+      margin-left: -110px;
+      margin-right: -110px;
+    }
+
+    .partners .row {
+      margin-right: 110px;
+      margin-left: 110px;
+      margin-bottom: 50px;
+    }
 
 
-/* Testimonial */
+    /* Testimonial */
       .content-3-7 {
         padding: 3rem 1rem 5rem;
       }
@@ -594,4 +594,8 @@
           padding-right: 9rem;
         }
       }
+
+      
+
+
 
