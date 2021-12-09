@@ -37,4 +37,12 @@ class FrontendController extends Controller
             'active' => 'about'
         ]);
     }
+
+    public function details(Request $request)
+    {
+        return view('pages/frontend/details', [
+            'title' => 'Details',
+            'active' => 'details'
+        ]);
+    }
 }
