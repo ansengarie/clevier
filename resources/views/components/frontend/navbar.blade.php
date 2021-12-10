@@ -16,7 +16,7 @@
             <a class="nav-link {{ ($active == "products") ? 'active' : '' }}" href="/products">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="/#categories">Category</a>
+            <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" href="/categories">Category</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" href="/about">About</a>
@@ -92,10 +92,10 @@
                 <a class="nav-link {{ ($active == "products") ? 'active' : '' }}" style="color: #008585;" href="/products">Product</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" style="color: #008585;" href="/about">about</a>
+                <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" style="color: #008585;" href="/categories">Category</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($active == "categories") ? 'active' : '' }}" style="color: #008585;" href="#categories">Category</a>
+                <a class="nav-link {{ ($active == "about") ? 'active' : '' }}" style="color: #008585;" href="/about">About</a>
               </li>
               <li class="nav-item pt-2">
                 @auth
