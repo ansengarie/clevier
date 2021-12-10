@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -27,11 +28,11 @@ class FrontendController extends Controller
 
     public function categories(Request $request)
     {
+        $categories = Category::query()->get();
+        $title = 'Categories';
+        $active = 'categories';
 
-        return view('pages/frontend/categories', [
-            'title' => 'Categories',
-            'active' => 'categories'
-        ]);
+        return view('pages/frontend/categories', compact(['categories', 'title', 'active']));
     }
 
     public function about(Request $request)

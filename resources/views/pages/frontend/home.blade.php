@@ -13,7 +13,7 @@
             Your <span class="text-field">Interiors</span> Dream
           </h1>
           <div class="d-flex flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-            <a class="btn d-inline-flex mb-md-0 btn-try text-white" href="#browse-the-room">
+            <a class="btn d-inline-flex mb-md-0 btn-try text-white" href="#just-arrived">
               Explore Now
             </a>
             <button class="btn btn-outline">
@@ -36,7 +36,7 @@
   <!-- End Header -->
 
   <!-- Just Arrived -->
-  <section class="flex py-16 px-4 scrollspy">
+  <section class="flex py-16 px-4 scrollspy" id="just-arrived">
     <div class="content-2-2 container-xxl mx-auto p-0  position-relative">
       <div class="text-center title-text">
         <h1 class="text-title story">JUST ARRIVED -</h1>
@@ -53,7 +53,7 @@
         <div class="col-md-4 mt-3">
           <div class="card">
             <a href="{{ route('details', $product->slug) }}">
-              <img src="https://source.unsplash.com/300x200?furniture" class="card-img-top" alt="...">
+              <img src="https://source.unsplash.com/300x200?{{ $product->category->name }}" class="card-img-top" alt="...">
             </a>
             <div class="card-body">
               <h5 class="card-title">{{ $product->name }}</h5>
