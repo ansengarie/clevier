@@ -18,10 +18,11 @@ class FrontendController extends Controller
 
     public function products(Request $request)
     {
-        return view('pages/frontend/products', [
-            'title' => 'Products',
-            'active' => 'products'
-        ]);
+        $products = Product::latest()->filter(request(['products', 'title', 'active']))->paginate(9)->withQueryString();
+        $title = 'Products';
+        $active = 'products';
+
+        return view('pages/frontend/products', compact('products', 'title', 'active'));
     }
 
     public function categories(Request $request)
