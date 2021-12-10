@@ -9,10 +9,11 @@ class FrontendController extends Controller
 {
     public function index(Request $request)
     {
-        return view('pages/frontend/home', [
-            'title' => 'Home',
-            'active' => 'home'
-        ]);
+        $products = Product::query()->inRandomOrder()->limit(6)->get();
+        $title = 'Home';
+        $active = 'home';
+
+        return view('pages/frontend/home', compact('products', 'title', 'active'));
     }
 
     public function products(Request $request)
