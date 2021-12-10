@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class FrontendController extends Controller
 {
@@ -24,6 +25,7 @@ class FrontendController extends Controller
 
     public function categories(Request $request)
     {
+
         return view('pages/frontend/categories', [
             'title' => 'Categories',
             'active' => 'categories'

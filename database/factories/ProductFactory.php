@@ -19,11 +19,14 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'category_id' => $this->faker->numberBetween(1, 5),
-            'name' => $this->faker->name(),
-            'price' => $this->faker->numberBetween(100000, 2000000),
-            'description' => $this->faker->paragraph(2),
-            'slug' => $this->faker->slug()
+            'name' => $this->faker->words(2, true),
+            'slug' => $this->faker->slug(),
+            'price' => $this->faker->numberBetween(200000, 5000000),
+            'description' => collect($this->faker->paragraphs(mt_rand(2, 3)))
+                ->map(fn ($p) => "<p>$p</p>")
+                ->implode(''),
+            'user_id' => mt_rand(1, 4),
+            'category_id' => mt_rand(1, 5)
         ];
     }
 }

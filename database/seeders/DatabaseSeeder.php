@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Aji Nuansa Sengarie',
-            'username' => 'ansengarie',
-            'email' => 'ansengarie@gmail.com',
-            'password' => bcrypt('sengarie9')
+            'name' => 'admin',
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin')
         ]);
 
-        \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(4)->create();
 
         Category::create([
             'name' => 'Living Room',
@@ -51,8 +51,6 @@ class DatabaseSeeder extends Seeder
             'slug' => 'family-room'
         ]);
 
-        $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Bezhanov\Faker\Provider\Commerce($faker));
-        Product::factory(10)->create();
+        Product::factory(20)->create();
     }
 }
