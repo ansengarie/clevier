@@ -28,7 +28,7 @@ class FrontendController extends Controller
 
     public function categories(Request $request)
     {
-        $categories = Category::query()->get();
+        $categories = Category::all();
         $title = 'Categories';
         $active = 'categories';
 
@@ -43,11 +43,12 @@ class FrontendController extends Controller
         ]);
     }
 
-    public function details(Request $request)
+    public function details(Product $product)
     {
-        return view('pages/frontend/details', [
-            'title' => 'Details',
-            'active' => 'details'
-        ]);
+        $recommendations = Product::query()->inRandomOrder()->limit(5)->get();
+        $title = 'Details';
+        $active = 'details';
+
+        return view('pages/frontend/details', compact(['recommendations', 'product', 'title', 'active']));
     }
 }
