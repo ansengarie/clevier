@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminProductController;
+use App\Http\Controllers\AdminCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +34,16 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('index')->middleware('auth');
+Route::get('/dashboard', function () {
+  return view('pages.dashboard.index', [
+    'title' => 'Dashboard'
+  ]);
+})->middleware('auth');
+
+Route::get('/dashboard/products/checkSlug', [DashboardController::class, 'checkSlug'])->middleware('auth');
+Route::resource('/dashboard/products', DashboardController::class)->middleware('auth');
+
+//admin
+Route::resource('/dashboard/admin-products', AdminProductController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/users', AdminUserController::class)->except('show')->middleware('admin');

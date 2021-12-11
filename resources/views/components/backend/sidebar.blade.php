@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="/">
+        <a class="nav-link " href="/dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -20,7 +20,7 @@
             </a>
           </li>
           <li>
-            <a href="/products/create">
+            <a href="/dashboard/products/create">
               <i class="bi bi-plus-square"></i><span>Create Products</span>
             </a>
           </li>
@@ -30,21 +30,21 @@
        @can('admin')
       <li class="nav-heading">ADMINISTRATOR</li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="/dashboard/admin-products">
           <i class="bi bi-box-seam"></i>
           <span>All Furniture</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="/dashboard/categories">
           <i class="bi bi-grid"></i>
           <span>Categories</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="/dashboard/users">
           <i class="bi bi-people"></i>
           <span>Users</span>
         </a>

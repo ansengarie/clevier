@@ -56,11 +56,12 @@
 <!-- Carousel -->
 
 <!-- All Products -->
+@if ($products->count())
 <div class="album py-3">
   <div class="container">
     <div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
       <div class="text-center title-text">
-        <h1 class="text-title story" id="products">All Products -</h1>
+        <h1 class="text-title story" id="products">{{ $title }}</h1>
         <p class="primary-header" id="categories">
           Choose Your Type!
         </p>
@@ -72,7 +73,7 @@
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
           <div class="card shadow-sm">
-            <img src="https://source.unsplash.com/300x225?{{ $product->category->name }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="https://source.unsplash.com/300x225?{{ $product->category->slug }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
 
             <div class="card-body">
@@ -89,6 +90,10 @@
         @endforeach
       </div>
     </div>
+
+    @else
+    <p class="text-center fs-4">No posts found.</p>
+   @endif
 
     <div class="d-flex justify-content-end mt-4">
       {{ $products->links() }}
