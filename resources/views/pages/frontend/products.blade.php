@@ -72,7 +72,7 @@
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
           <div class="card shadow-sm">
-            <img src="https://source.unsplash.com/300x225?interior" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="https://source.unsplash.com/300x225?{{ $product->category->name }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
 
             <div class="card-body">
@@ -80,7 +80,7 @@
               <p class="card-text">IDR {{ number_format($product->price) }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group mx-auto">
-                  <a href="/details" style="padding-right: 5px;"><button type="button" class="btn btn-sm">View</button></a>
+                  <a href="/details/{{ $product->slug }}" style="padding-right: 5px;"><button type="button" class="btn btn-sm">View</button></a>
                 </div>
               </div>
             </div>

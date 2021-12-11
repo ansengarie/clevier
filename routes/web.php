@@ -21,7 +21,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('home', [FrontendController::class, 'index'])->name('index');
 Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('products', [FrontendController::class, 'products'])->name('products');
-Route::get('details', [FrontendController::class, 'details'])->name('details');
+Route::get('details/{product:slug}', [FrontendController::class, 'details'])->name('details');
 Route::get('categories', [FrontendController::class, 'categories'])->name('categories');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
