@@ -3,7 +3,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <i class="bi bi-list toggle-sidebar-btn p-2"></i>
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <span class="d-none d-lg-block">Innerior</span>
         
       </a>

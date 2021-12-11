@@ -19,11 +19,17 @@ class FrontendController extends Controller
 
     public function products(Request $request)
     {
-        $products = Product::latest()->filter(request(['products', 'title', 'active']))->paginate(9)->withQueryString();
-        $title = 'Products';
+        $title = '';
+        if (request('category')) {
+            $category = Category::firstWhere('slug', request('category'));
+            $title = ' in ' . $category->name;
+        }
+
+        $products = Product::latest()->filter(request(['products', 'category']))->paginate(9)->withQueryString();
+        $title = 'All Products' . $title;
         $active = 'products';
 
-        return view('pages/frontend/products', compact('products', 'title', 'active'));
+        return view('pages/frontend/products', compact('title', 'products', 'title', 'active'));
     }
 
     public function categories(Request $request)
@@ -31,6 +37,7 @@ class FrontendController extends Controller
         $categories = Category::all();
         $title = 'Categories';
         $active = 'categories';
+
 
         return view('pages/frontend/categories', compact(['categories', 'title', 'active']));
     }

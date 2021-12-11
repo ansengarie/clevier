@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -15,9 +17,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('pages/dashboard/index', [
+        return view('pages/dashboard/products/index', [
             'title' => 'Dashboard',
-            'active' => 'dashboard'
+            'active' => 'dashboard',
+            'products' => Product::where('user_id', auth()->user()->id)->get()
         ]);
     }
 
@@ -28,7 +31,9 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        
+        return view('pages/dashboard/products/create', [
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -48,9 +53,14 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        if ($product->author->id !== auth()->user()->id) {
+            abort(403);
+        }
+        return view('pages.dashboard.products.show', [
+            'product' => $product
+        ]);
     }
 
     /**
@@ -59,9 +69,15 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        if ($product->author->id !== auth()->user()->id) {
+            abort(403);
+        }
+        return view('pages.dashboard.products.edit', [
+            'post' => $product,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -71,9 +87,34 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $rules = [
+            'title' => 'required|max:255',
+            'category_id' => 'required',
+            'image' => 'image|file|max:1024',
+            'description' => 'required'
+        ];
+
+        if ($request->slug != $product->slug) {
+            $rules['slug'] = 'required|unique:posts';
+        }
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+        $validatedData['user_id'] = auth()->user()->id;
+
+        Product::where('id', $product->id)
+            ->update($validatedData);
+
+        return redirect('pages/dashboard/products/index')->with('success', 'Post has been updated!');
     }
 
     /**
@@ -82,8 +123,19 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        if ($product->image) {
+            Storage::delete($product->image);
+        }
+        Product::destroy($product->id);
+
+        return redirect('pages/dashboard/products/index')->with('success', 'product has been deleted!');
+    }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        return response()->json(['slug' => $slug]);
     }
 }
