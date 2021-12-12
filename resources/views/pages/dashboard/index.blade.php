@@ -2,7 +2,6 @@
 
 
 @section('container')
-
     <div class="pagetitle mb-4" id="scroll">
       <h1>{{  $title  }}</h1>
     </div>
@@ -10,17 +9,56 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="row content-d">
+            <div class="col-xxl-6 col-md-6">
+              <div class="card card-d-img">
+                  <img src="https://source.unsplash.com/600x410?computer"  class="img-fluid rounded-start"  alt="...">
+              </div>
+            </div>
+            <div class="col-xxl-6 col-md-6">
+              <div class="card furniture-card card-d">
+                <div class="row g-0">
+                  <div class="col-md-12">
+                    <div class="card-body mx-2">
+                      <h2 class="card-title-welcome mt-1">Welcome back! {{ auth()->user()->name }}</h2>
+                      <p class="card-text">
+                        <?php
+                          $data = "https://zenquotes.io/api/random";
+                          $quotes = file_get_contents($data);
+                          $quotes = json_decode($quotes, TRUE);
+                        ?>
+                          {{ $quotes[0]['q'] }} ~ {{ $quotes[0]['a'] }}
+                        </p> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            @if(auth()->user()->is_admin == false)
             <!-- Furniture -->
-            <div class="col-xxl-4 col-md-6">
               <div class="card info-card furniture-card card-d">
                 <div class="card-body mx-2">
-                  <h5 class="card-title">Furniture <span></span></h5>
+                  <h5 class="card-title">My Furniture <span></span></h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-house"></i>
                     </div>
                     <div class="ps-3 pt-1">
-                      <h2><span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
+                      <h2><span data-purecounter-start="0" data-purecounter-end="{{ $product }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            @elseif(auth()->user()->is_admin == true)
+            <!-- Furniture -->
+              <div class="card info-card furniture-card card-d">
+                <div class="card-body mx-2">
+                  <h5 class="card-title">My Furniture <span></span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-house"></i>
+                    </div>
+                    <div class="ps-3 pt-1">
+                      <h2><span data-purecounter-start="0" data-purecounter-end="{{ $product }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
                     </div>
                   </div>
                 </div>
@@ -30,13 +68,29 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card category-card card-d">
                 <div class="card-body mx-2">
-                  <h5 class="card-title">Category</h5>
+                  <h5 class="card-title">All Furniture</h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-grid"></i>
                     </div>
                     <div class="ps-3 pt-1">
-                      <h2><span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
+                      <h2><span data-purecounter-start="0" data-purecounter-end="{{ $products }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Category -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card category-card card-d">
+                <div class="card-body mx-2">
+                  <h5 class="card-title">Categories</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-grid"></i>
+                    </div>
+                    <div class="ps-3 pt-1">
+                      <h2><span data-purecounter-start="0" data-purecounter-end="{{ $categories }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
                     </div>
                   </div>
                 </div>
@@ -58,6 +112,7 @@
                 </div>
               </div>
             </div>
+            @endif
           </div>
         </div>
       </div>
