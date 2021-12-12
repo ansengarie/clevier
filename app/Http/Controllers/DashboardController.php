@@ -32,7 +32,8 @@ class DashboardController extends Controller
     public function create()
     {
         return view('pages/dashboard/products/create', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'active' =>  'products'
         ]);
     }
 
@@ -114,7 +115,7 @@ class DashboardController extends Controller
         Product::where('id', $product->id)
             ->update($validatedData);
 
-        return redirect('pages/dashboard/products/index')->with('success', 'Post has been updated!');
+        return redirect('dashboard/products')->with('success', 'Post has been updated!');
     }
 
     /**
@@ -130,7 +131,7 @@ class DashboardController extends Controller
         }
         Product::destroy($product->id);
 
-        return redirect('pages/dashboard/products/index')->with('success', 'product has been deleted!');
+        return redirect('dashboard/products/')->with('success', 'product has been deleted!');
     }
 
     public function checkSlug(Request $request)

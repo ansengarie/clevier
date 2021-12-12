@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MyDashboardController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminCategoryController;
 
@@ -34,11 +35,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function () {
-  return view('pages.dashboard.index', [
-    'title' => 'Dashboard'
-  ]);
-})->middleware('auth');
+Route::get('/dashboard', [MyDashboardController::class, 'index'])->middleware('auth');
 
 Route::get('/dashboard/products/checkSlug', [DashboardController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/products', DashboardController::class)->middleware('auth');

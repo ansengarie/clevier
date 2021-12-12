@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
-use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class AdminProductController extends Controller
+class MyDashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,12 @@ class AdminProductController extends Controller
      */
     public function index()
     {
-        return view('pages/dashboard/admin-products/index', [
-            'title' => 'All Product',
-            'active' => 'all-product',
-            'products' => Product::all()
+        return view('pages/dashboard/index', [
+            'title' => 'Dashboard',
+            'active' => 'dashboard',
+            'product' => Product::where('user_id', auth()->user()->id)->count(),
+            'categories'=> Category::all()->count(),
+            'products' => Product::all()->count()
         ]);
     }
 
