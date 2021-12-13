@@ -2,17 +2,18 @@
 @section('container')
 
 <div class="row featurette">
-  <div class="col-md-7 order-md-3">
-    <h2 class="featurette-heading" style="color: #00b4b4;">{{ $product->name }}
-      <p class="lead" style="padding-top: 15px; font-size: 30px;">Rp. {{ number_format($product->price) }}</p>
-      <hr class="featurette-divider">
-      <h6 class="mt-5 d-inline-flex" style="font-size: 12px;">{!! $product->description !!}</h6>
+  <div class="col-md-6 order-md-3">
+    <p></p>
+    <a href="/categories" style="color: gray;" class="text-decoration-none">{{ $product->category->name }}</a>
+    <h2 class="featurette-heading" style="color: #00b4b4; margin-top: 30px;">{{ $product->name }}
+      <p class="lead" style="padding-top: 15px; font-size: 30px; color: gray;">Rp. {{ number_format($product->price) }}</p>
+      <h6 class="mt-5" style="font-size: 15px;">{!! $product->description !!}</h6>
   </div>
   <div class="col-md-5 order-md-2">
-    <img src="https://source.unsplash.com/300x225?{{ $product->category->name }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm" style="border-radius: 6%" width="500px" height="500px" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <img src="https://source.unsplash.com/300x230?{{ $product->category->name }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm" style="border-radius: 6%" width="500px" height="500px" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
   </div>
-  <div class="col-md-1 order-md-1">
-    <img src="https://source.unsplash.com/95x80?{{ $product->category->name }}" style="margin-bottom: 18px; border-radius: 0.75em">
+  <div class="col-md-1 order-md-1 mt-2">
+    <img src="https://source.unsplash.com/95x80?{{ $product->category->name }}" style="border-radius: 0.75em">
   </div>
 </div>
 
