@@ -19,8 +19,8 @@ class DashboardController extends Controller
     public function index()
     {
         return view('pages/dashboard/products/index', [
-            'title' => 'Dashboard',
-            'active' => 'dashboard',
+            'title' => 'My Furniture',
+            'active' => 'my-furniture',
             'products' => Product::where('user_id', auth()->user()->id)->get()
         ]);
     }
@@ -34,7 +34,7 @@ class DashboardController extends Controller
     {
         return view('pages/dashboard/products/create', [
             'categories' => Category::all(),
-            'active' =>  'products'
+            'active' =>  'my-furniture'
         ]);
     }
 
@@ -72,11 +72,12 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Product $product)
-    {
+    {   
         if ($product->author->id !== auth()->user()->id) {
             abort(403);
         }
         return view('pages.dashboard.products.show', [
+            'active' => 'my-furniture',
             'product' => $product,
             'categories' => Category::all()
         ]);
@@ -94,6 +95,7 @@ class DashboardController extends Controller
             abort(403);
         }
         return view('pages.dashboard.products.edit', [
+            'active' => 'my-furniture',
             'product' => $product,
             'categories' => Category::all()
         ]);
@@ -109,8 +111,9 @@ class DashboardController extends Controller
     public function update(Request $request, Product $product)
     {
         $rules = [
-            'title' => 'required|max:255',
+            'name' => 'required|max:255',
             'category_id' => 'required',
+            'price' => 'required',
             'image' => 'image|file|max:1024',
             'description' => 'required'
         ];

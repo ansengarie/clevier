@@ -22,8 +22,5 @@
       @endif
     </div>
   </div>
-  <div class="col-md-1 order-md-1 mt-4 mb-5">
-    <img src="https://source.unsplash.com/95x80?{{ $product->category->name }}" style="border-radius: 0.75em;">
-  </div>
 </div>
 @endsection

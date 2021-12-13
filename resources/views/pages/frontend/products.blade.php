@@ -73,7 +73,16 @@
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
           <div class="card shadow-sm">
+            @if ($product->image)
+              <div style="max-height: 400px; overflow: hidden;">
+                  <img src="{{ asset('storage/' . $product->image) }}"  class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 0.75em;">
+              </div>   
+            @else
             <img src="https://source.unsplash.com/300x225?{{ $product->category->slug }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 0.75em;">
+            @endif
+
+
+            
             <title>Placeholder</title>
 
             <div class="card-body">

@@ -9,7 +9,7 @@
     <div class="col-lg-8">
       <div class="card">
         <div class="card-body">
-          <div class="col-lg-8 pt-3">
+          <div class="col-lg-12 pt-3">
             <form method="post" action="/dashboard/products" class="mb-5" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
@@ -62,7 +62,7 @@
               @enderror
             </div>
             <div class="mb-3">
-              <label for="description" class="form-label">description</label>
+              <label for="description" class="form-label">Description</label>
               @error('description')
               <p class="text-danger">{{ $message }}</p>
               @enderror

@@ -18,7 +18,7 @@ class AdminProductController extends Controller
     {
         return view('pages/dashboard/admin-products/index', [
             'title' => 'All Furniture',
-            'active' => 'all-product',
+            'active' => 'all-products',
             'products' => Product::all()
         ]);
     }
@@ -89,14 +89,14 @@ class AdminProductController extends Controller
         if ($product->image) {
             Storage::delete($product->image);
         }
-        Product::destroy($product->slug);
+        Product::destroy($product->id);
         
         return redirect('dashboard/admin-products/')->with('success', 'product has been deleted!');
     }
 
     public function checkSlug(Request $request)
     {
-        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        $slug = SlugService::createSlug(Product::class, 'slug', $request->name);
         return response()->json(['slug' => $slug]);
     }
 }
