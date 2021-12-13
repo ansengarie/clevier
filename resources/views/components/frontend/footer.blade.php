@@ -20,7 +20,7 @@
           <h2 class="footer-text-title">Company</h2>
           <nav class="list-unstyled">
             <li class="list-space">
-              <a href="#" class="list-menu">About</a>
+              <a href="/about" class="list-menu">About</a>
             </li>
             <li class="list-space">
               <a href="#" class="list-menu">Career</a>
@@ -34,7 +34,7 @@
           <h2 class="footer-text-title">Explore</h2>
           <nav class="list-unstyled">
             <li class="list-space">
-              <a href="#" class="list-menu">Product</a>
+              <a href="/products" class="list-menu">Product</a>
             </li>
             <li class="list-space">
               <a href="#" class="list-menu">Brand</a>

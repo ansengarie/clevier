@@ -51,15 +51,15 @@
       <div class="row">
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
-          <div class="card">
-            <a href="{{ route('details', $product->slug) }}">
-              <img src="https://source.unsplash.com/300x200?{{ $product->category->name }}" class="card-img-top" alt="...">
-            </a>
+          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
+            <div class="card" style="border-radius: 0.75em;">
+              <img src="https://source.unsplash.com/300x200?{{ $product->category->name }}" class="card-img-top" style="border-radius: 0.75em;">
             <div class="card-body">
               <h5 class="card-title">{{ $product->name }}</h5>
               <p class="card-text">IDR {{ number_format($product->price) }}</p>
             </div>
-          </div>
+            </div>
+          </a>
         </div>
         @endforeach
       </div>
