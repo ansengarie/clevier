@@ -15,9 +15,13 @@ class AdminCategoryController extends Controller
     public function index()
     {
         return view('pages.dashboard.categories.index', [
+            'title' => 'All Categories',
+            'active' => 'all-categories',
             'categories' => Category::all()
         ]);
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +30,9 @@ class AdminCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages/dashboard/categories/create', [
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -37,7 +43,15 @@ class AdminCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required|unique:categories',
+        ]);
+
+        $validatedData['user_id'] = auth()->user()->is_admin;
+
+        Category::create($validatedData);
+        return redirect('/dashboard/categories/')->with('success', 'New Categories added successfully');
     }
 
     /**
@@ -80,8 +94,10 @@ class AdminCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        Category::destroy($category->id);
+
+        return redirect('dashboard/categories/')->with('success', 'Category has been deleted!');
     }
 }

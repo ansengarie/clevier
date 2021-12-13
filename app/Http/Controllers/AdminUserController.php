@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
@@ -13,7 +13,11 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages/dashboard/users/index', [
+            'title' => 'All User',
+            'active' => 'all-user',
+            'users' => User::all()
+        ]);
     }
 
     /**

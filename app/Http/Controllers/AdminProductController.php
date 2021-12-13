@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\User;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminProductController extends Controller
 {
@@ -15,7 +17,7 @@ class AdminProductController extends Controller
     public function index()
     {
         return view('pages/dashboard/admin-products/index', [
-            'title' => 'All Product',
+            'title' => 'All Furniture',
             'active' => 'all-product',
             'products' => Product::all()
         ]);
@@ -82,8 +84,19 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        if ($product->image) {
+            Storage::delete($product->image);
+        }
+        Product::destroy($product->slug);
+        
+        return redirect('dashboard/admin-products/')->with('success', 'product has been deleted!');
+    }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        return response()->json(['slug' => $slug]);
     }
 }

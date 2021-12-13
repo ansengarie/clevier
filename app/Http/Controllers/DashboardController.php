@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
@@ -45,7 +46,23 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required|unique:products',
+            'price' => 'required',
+            'category_id' => 'required',
+            'image' => 'image|file|max:3024',
+            'description' => 'required'
+        ]);
+
+        if($request->file('image')){
+            $validatedData['image'] = $request->file('image')->store('product-images');
+        }
+
+        $validatedData['user_id'] = auth()->user()->id;
+
+        Product::create($validatedData);
+        return redirect('/dashboard/products/')->with('success', 'New product added successfully');
     }
 
     /**
@@ -60,7 +77,8 @@ class DashboardController extends Controller
             abort(403);
         }
         return view('pages.dashboard.products.show', [
-            'product' => $product
+            'product' => $product,
+            'categories' => Category::all()
         ]);
     }
 
@@ -76,7 +94,7 @@ class DashboardController extends Controller
             abort(403);
         }
         return view('pages.dashboard.products.edit', [
-            'post' => $product,
+            'product' => $product,
             'categories' => Category::all()
         ]);
     }
@@ -98,7 +116,7 @@ class DashboardController extends Controller
         ];
 
         if ($request->slug != $product->slug) {
-            $rules['slug'] = 'required|unique:posts';
+            $rules['slug'] = 'required|unique:products';
         }
 
         $validatedData = $request->validate($rules);
@@ -107,7 +125,7 @@ class DashboardController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = $request->file('image')->store('products-images');
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -115,7 +133,7 @@ class DashboardController extends Controller
         Product::where('id', $product->id)
             ->update($validatedData);
 
-        return redirect('dashboard/products')->with('success', 'Post has been updated!');
+        return redirect('dashboard/products/')->with('success', 'Products has been updated!');
     }
 
     /**
@@ -136,7 +154,7 @@ class DashboardController extends Controller
 
     public function checkSlug(Request $request)
     {
-        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        $slug = SlugService::createSlug(Product::class, 'slug', $request->name);
         return response()->json(['slug' => $slug]);
     }
 }

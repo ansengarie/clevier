@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/css/dashboard.css">
 
-    {{-- JavaScript --}}
-
-
+    <!-- Trix Editor-->
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.js"></script>
+    
     {{-- Icon Website --}}
     <link rel="icon" href="\img\logo\innerior-icon.png">
   </head>
