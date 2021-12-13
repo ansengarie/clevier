@@ -1,7 +1,7 @@
 @extends('layouts/frontend')
 @section('container')
 
-<div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
+<div class="content-2-2 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif; margin-top: -60px;">
   <div class="text-center title-text">
     <h1 class="text-title story" id="categories">BROWSE THE ROOM -</h1>
     <p class="primary-header">
