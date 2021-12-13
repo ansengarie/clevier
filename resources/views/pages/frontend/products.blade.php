@@ -73,7 +73,7 @@
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
           <div class="card shadow-sm">
-            <img src="https://source.unsplash.com/300x225?{{ $product->category->slug }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="https://source.unsplash.com/300x225?{{ $product->category->slug }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 0.75em;">
             <title>Placeholder</title>
 
             <div class="card-body">

@@ -33,7 +33,7 @@
         @foreach ($recommendations as $recommend)
         <div class="col">
           <div class="card">
-            <img src="https://source.unsplash.com/300x200?{{ $recommend->category->name }}" style="border-radius: 5%;" class="card-img-top">
+            <img src="https://source.unsplash.com/300x200?{{ $recommend->category->name }}" style="border-radius: 0.75em;" class="card-img-top">
             <div class="card-body" style="margin-bottom: -15%;">
               <h5 class="card-title" style="font-size: 20px;">{{ $recommend->name }}</h5>
               <p class="card-text" style="margin-top: -5%;">Rp. {{ number_format($recommend->price) }}</p>
