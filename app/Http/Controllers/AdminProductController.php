@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Product;
-use App\Models\User;
+use App\Models\Category;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -61,9 +62,17 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $admin_product)
     {
-        //
+        if (auth()->user()->is_admin == 0) {
+            abort(403);
+        }
+
+        return view('pages.dashboard.admin-products.edit', [
+            'active' => 'all-products',
+            'admin_product' => $admin_product,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -73,9 +82,35 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $admin_product)
     {
-        //
+        $rules = [
+            'name' => 'required|max:255',
+            'category_id' => 'required',
+            'price' => 'required',
+            'image' => 'image|file|max:1024',
+            'description' => 'required'
+        ];
+
+        if ($request->slug != $admin_product->slug) {
+            $rules['slug'] = 'required|unique:products';
+        }
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('products-images');
+        }
+
+        $validatedData['user_id'] = auth()->user()->id;
+
+        Product::where('id', $admin_product->id)
+            ->update($validatedData);
+
+        return redirect('dashboard/admin-products/')->with('success', 'Products has been updated!');
     }
 
     /**
@@ -84,13 +119,13 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $admin_product)
     {
-        if ($product->image) {
-            Storage::delete($product->image);
+        if ($admin_product->image) {
+            Storage::delete($admin_product->image);
         }
-        Product::destroy($product->id);
-        
+        Product::destroy($admin_product->id);
+
         return redirect('dashboard/admin-products/')->with('success', 'product has been deleted!');
     }
 

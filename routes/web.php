@@ -41,6 +41,7 @@ Route::get('/dashboard/products/checkSlug', [DashboardController::class, 'checkS
 Route::resource('/dashboard/products', DashboardController::class)->middleware('auth');
 
 //admin
-Route::resource('/dashboard/admin-products', AdminProductController::class)->except('show')->middleware('admin');
+Route::get('/dashboard/admin-products/checkSlug', [AdminProductController::class, 'checkSlug'])->middleware('admin');
+Route::resource('/dashboard/admin-products', AdminProductController::class)->middleware('admin');
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 Route::resource('/dashboard/users', AdminUserController::class)->except('show')->middleware('admin');
