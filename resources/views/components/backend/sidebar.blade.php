@@ -11,7 +11,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-house"></i><span>My Furniture</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-box-seam"></i><span>My Furniture</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -31,7 +31,7 @@
       <li class="nav-heading">ADMINISTRATOR</li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="/dashboard/admin-products">
-          <i class="bi bi-box-seam"></i>
+          <i class="bi bi-card-list"></i>
           <span>All Furniture</span>
         </a>
       </li>

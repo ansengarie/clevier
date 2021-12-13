@@ -15,11 +15,14 @@
     <div class="col-md-5 order-md-1">
       @if ($product->image)
       <div style="max-height: 400px; overflow: hidden;">
-          <img src="{{ asset('storage/' . $product->image) }}"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow" style="border-radius: 6%" width="500px" height="500px" preserveAspectRatio="xMidYMid slice"> 
+          <img src="{{ asset('storage/' . $product->image) }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow" style="border-radius: 6%" width="500px" height="500px" alt="{{ $product->category->name }}"> 
       </div>   
       @else
       <img src="https://source.unsplash.com/200x200?{{ $product->category->name }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow" style="border-radius: 6%" width="500px" height="500px" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
       @endif
+
+
+      
     </div>
   </div>
   <div class="col-md-1 order-md-1 mt-4 mb-5">

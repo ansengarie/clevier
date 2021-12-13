@@ -2,8 +2,8 @@
 
 
 @section('container')
-    <div class="pagetitle mb-4" id="scroll">
-      <h1 style="font-size: 35px; margin-bottom: 50px;">{{  $title  }}</h1>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">{{  $title  }}</h1>
     </div>
     <section class="section dashboard">
       <div class="row">
@@ -39,7 +39,7 @@
                   <h5 class="card-title">My Furniture <span></span></h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-house"></i>
+                      <i class="bi bi-box-seam"></i>
                     </div>
                     <div class="ps-3 pt-1">
                       <h2><span data-purecounter-start="0" data-purecounter-end="{{ $product }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
@@ -50,12 +50,12 @@
             </div>
             @elseif(auth()->user()->is_admin == true)
             <!-- Furniture -->
-              <div class="card info-card furniture-card card-d">
+              <div class="card info-card product-card card-d">
                 <div class="card-body mx-2">
                   <h5 class="card-title">My Furniture <span></span></h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-house"></i>
+                      <i class="bi bi-box-seam"></i>
                     </div>
                     <div class="ps-3 pt-1">
                       <h2><span data-purecounter-start="0" data-purecounter-end="{{ $product }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
@@ -71,7 +71,7 @@
                   <h5 class="card-title">All Furniture</h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-grid"></i>
+                      <i class="bi bi-card-list"></i>
                     </div>
                     <div class="ps-3 pt-1">
                       <h2><span data-purecounter-start="0" data-purecounter-end="{{ $products }}" data-purecounter-duration="0.6" class="purecounter"></span> </h2>
