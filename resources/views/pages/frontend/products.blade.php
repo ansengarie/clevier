@@ -17,7 +17,7 @@
             <div class="carousel-caption justify-content-left my-5">
               <h3 style="color: rgb(0, 0, 0);">“Your Home should tell the story of who you are, and be a Collection of what you Love.”</h3>
               <h6 style="color: #00b4b4;">― Nate Berkus, The Things That Matter</h6>
-              <a class="btn mt-4" style="margin-bottom: -15px;" href="#products">Let's Explore!</a>
+              <a class="btn mt-4" style="margin-bottom: -15px; padding-bottom: 15px; padding-top: 15px; border-radius: 0.75em;" href="#products">Let's Explore!</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
             <div class="carousel-caption justify-content-left my-5">
               <h3 style="color: rgb(0, 0, 0);">“Our interiors are an insight into our brains. It is a collaboration of design, art, humor, irony, functionality, and the street.”</h3>
               <h6 style="color: #00b4b4;">― Amanda Talbot, Rethink: The Way You Live</h6>
-              <a class="btn mt-4" style="margin-bottom: -15px;" href="#products">Let's Explore!</a>
+              <a class="btn mt-4" style="margin-bottom: -15px; padding-bottom: 15px; padding-top: 15px; border-radius: 0.75em;" href="#products">Let's Explore!</a>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
             <div class="carousel-caption justify-content-right my-5">
               <h3 style="color: rgb(0, 0, 0);">“Clever design converts and changes according to need.”</h3>
               <h6 style="color: rgb(0, 0, 0);">― Amanda Talbot, Rethink: The Way You Live</h6>
-              <a class="btn mt-4" style="margin-bottom: -15px;" href="#products">Let's Explore!</a>
+              <a class="btn mt-4" style="margin-bottom: -15px; padding-bottom: 15px; padding-top: 15px; border-radius: 0.75em;" href="#products">Let's Explore!</a>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
           <div class="card shadow-sm">
-            <img src="https://source.unsplash.com/300x225?{{ $product->category->slug }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="https://source.unsplash.com/300x225?{{ $product->category->slug }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 0.75em;">
             <title>Placeholder</title>
 
             <div class="card-body">
@@ -81,7 +81,7 @@
               <p class="card-text">IDR {{ number_format($product->price) }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group mx-auto">
-                  <a href="/details/{{ $product->slug }}" style="padding-right: 5px;"><button type="button" class="btn btn-sm">View</button></a>
+                  <a href="/details/{{ $product->slug }}" class="link btn btn-fill text-white" style="margin-top: 20px; border-radius: 0.75em;"><button type="button" class="btn btn-sm" style="font-size: 16px;">View</button></a>
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@
 
 @section('container')
     <div class="pagetitle mb-4" id="scroll">
-      <h1>{{  $title  }}</h1>
+      <h1 style="font-size: 35px; margin-bottom: 50px;">{{  $title  }}</h1>
     </div>
     <section class="section dashboard">
       <div class="row">
@@ -11,7 +11,7 @@
           <div class="row content-d">
             <div class="col-xxl-6 col-md-6">
               <div class="card card-d-img">
-                  <img src="https://source.unsplash.com/600x410?computer"  class="img-fluid rounded-start"  alt="...">
+                  <img src="https://source.unsplash.com/600x406?computer"  class="img-fluid rounded-start"  alt="...">
               </div>
             </div>
             <div class="col-xxl-6 col-md-6">
