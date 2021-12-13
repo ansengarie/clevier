@@ -31,6 +31,7 @@ class AdminCategoryController extends Controller
     public function create()
     {
         return view('pages/dashboard/categories/create', [
+            'active' => 'all-categories',
             'categories' => Category::all()
         ]);
     }

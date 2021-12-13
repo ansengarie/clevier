@@ -33,6 +33,7 @@
               <td>{{ $product->category->name }}</td>
               <td>{{ $product->author->name }}</td>
               <td class="text-center">
+                <a href="admin-products/{{ $product->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
                 <form action="admin-products/{{ $product->slug }}" method="post" class="d-inline">
                   @method('delete')
                   @csrf

@@ -1,19 +1,23 @@
 @extends('layouts/frontend')
 @section('container')
 
-<div class="row featurette">
+<div class="row featurette justify-content">
+  
+  <div class="col-md-6 order-md-2">
+       @if ($product->image)
+          <img src="{{ asset('storage/' . $product->image) }}"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm" style="border-radius: 6%" width="500px" height="500px" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+   
+      @else
+      <img src="https://source.unsplash.com/200x200?{{ $product->category->name }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow" style="border-radius: 6%" width="500px" height="500px" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+      @endif
+  </div>
+
   <div class="col-md-6 order-md-3">
     <p></p>
     <a href="/categories" style="color: gray;" class="text-decoration-none">{{ $product->category->name }}</a>
-    <h2 class="featurette-heading" style="color: #00b4b4; margin-top: 30px;">{{ $product->name }}
+    <h2 class="featurette-heading" style="color: #00b4b4; margin-top: 20px;">{{ $product->name }}
       <p class="lead" style="padding-top: 15px; font-size: 30px; color: gray;">Rp. {{ number_format($product->price) }}</p>
       <h6 class="mt-5" style="font-size: 15px;">{!! $product->description !!}</h6>
-  </div>
-  <div class="col-md-5 order-md-2">
-    <img src="https://source.unsplash.com/300x230?{{ $product->category->name }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow-sm" style="border-radius: 6%" width="500px" height="500px" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-  </div>
-  <div class="col-md-1 order-md-1 mt-2">
-    <img src="https://source.unsplash.com/95x80?{{ $product->category->name }}" style="border-radius: 0.75em">
   </div>
 </div>
 

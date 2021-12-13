@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Product Categories</h1>
+        <h1 class="h2">{{ $title }}</h1>
     </div>
 
     @if(session()->has('success'))
@@ -26,7 +26,6 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $category->name }}</td>
               <td>
-                <a href="categories/{{ $category->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
                 <form action="categories/{{ $category->slug }}" method="post" class="d-inline">
                   @method('delete')
                   @csrf
