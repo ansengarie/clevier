@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminUserController extends Controller
 {
@@ -58,9 +60,17 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        if (auth()->user()->is_admin == 0) {
+            abort(403);
+        }
+
+        return view('pages.dashboard.users.edit', [
+            'active' => 'all-users',
+            'user' => $user,
+            'users' => User::all()
+        ]);
     }
 
     /**
@@ -70,9 +80,23 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $rules = [
+            'name' => 'required|max:255',
+            'username' => 'required',
+            'email' => 'required',
+            'is_admin' => 'required'
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        $validatedData['is_admin'] = auth()->user()->id;
+
+        User::where('username', $user->username)
+            ->update($validatedData);
+
+        return redirect('dashboard/users/')->with('success', 'User has been updated!');
     }
 
     /**
@@ -81,8 +105,10 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        User::destroy($user->username);
+
+        return redirect('dashboard/users/')->with('success', 'product has been deleted!');
     }
 }
