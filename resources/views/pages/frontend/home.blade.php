@@ -1,6 +1,10 @@
 @extends('layouts/frontend')
 @section('container')
 <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
+  <!-- Back to top button -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
   <div class="container-xxl mx-auto p-0  position-relative header-2-2">
     <!-- Header -->
     <div>
@@ -52,12 +56,19 @@
         @foreach ($products as $product)
         <div class="col-md-4 mt-3">
           <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
-            <div class="card" style="border-radius: 0.75em;">
-              <img src="https://source.unsplash.com/300x200?{{ $product->category->name }}" class="card-img-top" style="border-radius: 0.75em;">
-            <div class="card-body">
-              <h5 class="card-title">{{ $product->name }}</h5>
-              <p class="card-text">IDR {{ number_format($product->price) }}</p>
-            </div>
+            <div class="card" style="border-radius: 12px">
+              @if ($product->image)
+                <div style="max-height: 400px; overflow: hidden;">
+                    <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top" style="border-radius: 12px 12px 0px 0px;">
+                </div>   
+              @else
+              <img src="https://source.unsplash.com/300x200?{{ $product->category->name }}" class="card-img-top" style="border-radius: 12px 12px 0px 0px;">
+              @endif
+              
+              <div class="card-body">
+                <h5 class="card-title">{{ $product->name }}</h5>
+                <p class="card-text">IDR {{ number_format($product->price) }}</p>
+              </div>
             </div>
           </a>
         </div>
@@ -110,7 +121,7 @@
   <?php
   $faker = Faker\Factory::create();  /// For random names & countries of testimonials
   ?>
-  <section class="h-100 w-100" style="box-sizing: border-box;">
+  <section class="h-100 w-100" style="box-sizing: border-box;" id="testimonial">
     <div class="content-3-7 overflow-hidden container-xxl mx-auto position-relative">
       <div class="container mx-auto">
         <div class="text-center title-text">

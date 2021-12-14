@@ -3,16 +3,16 @@
     <div class="list-footer">
       <div class="row gap-md-0 gap-3">
         <div class="col-lg-3 col-md-6">
-          <h2 class="footer-text-title">Overview</h2>
+          <h2 class="footer-text-title">Explore</h2>
           <nav class="list-unstyled">
             <li class="list-space">
-              <a href="#" class="list-menu">Shipping</a>
+              <a href="/products" class="list-menu">Product</a>
             </li>
             <li class="list-space">
-              <a href="#" class="list-menu">Refund</a>
+              <a href="/categories" class="list-menu">Category</a>
             </li>
             <li class="list-space">
-              <a href="#" class="list-menu">Promotion</a>
+              <a href="/#testimonial" class="list-menu">Testimonial</a>
             </li>
           </nav>
         </div>
@@ -23,24 +23,29 @@
               <a href="/about" class="list-menu">About</a>
             </li>
             <li class="list-space">
-              <a href="#" class="list-menu">Career</a>
+              <a href="/about#ourteam" class="list-menu">Our Team</a>
             </li>
             <li class="list-space">
-              <a href="#" class="list-menu">Contact Us</a>
+              <a href="/about#contact-us" class="list-menu">Contact Us</a>
             </li>
           </nav>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <h2 class="footer-text-title">Explore</h2>
+        <div class="col-lg-6 col-md-6">
+          <h2 class="footer-text-title">Contact</h2>
           <nav class="list-unstyled">
-            <li class="list-space">
-              <a href="/products" class="list-menu">Product</a>
-            </li>
-            <li class="list-space">
-              <a href="#" class="list-menu">Brand</a>
-            </li>
-            <li class="list-space">
-              <a href="#" class="list-menu">Designer</a>
+            <li class="list-menu">
+              <li class="list-space list-menu">
+                <i class="bi bi-geo-alt-fill"></i> 
+                  Kampus IV : Jl. Dr. Setiabudi No. 193 Bandung 40154.<br>
+              </li>
+              <li class="list-space list-menu">
+                <i class="bi bi-telephone-fill"></i> 
+                  Phone : 022-2021440, 2019433, Fax: 022-2009267.
+              </li>
+              <li class="list-space list-menu">
+                <i class="bi bi-envelope-fill"></i>
+                  Email : Innerior@gmail.com
+              </li>
             </li>
           </nav>
         </div>

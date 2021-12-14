@@ -89,7 +89,7 @@
       </div>
 
       <!--- Our Team --->
-      <div class="content-2-2 container-xxl mx-auto p-0  position-relative">
+      <div class="content-2-2 container-xxl mx-auto p-0  position-relative" id="ourteam">
         <div class="text-center title-text">
           <h4 class="fw-bold mb-2" style="color: #00b4b4; font-size:27px;">OUR TEAM</h4>
         </div>
@@ -134,11 +134,11 @@
       </div>
           
       <!-- Contact Us-->
-      <div class="content-2-2 container-xxl mx-auto p-0  position-relative">
+      <div class="content-2-2 container-xxl mx-auto p-0  position-relative" id="contact-us">
         <div class="row mt-5 py-3">
             <div class="col-md-1"></div>
             <div class="col-md-5">
-              <h4 class="fw-bold mb-4" style="color: #00b4b4; font-size:25px;" id="contactUs">CONTACT US-</h4>
+              <h4 class="fw-bold mb-4" style="color: #00b4b4; font-size:25px;" id="contactus">CONTACT US-</h4>
               <form action="https://formsubmit.co/ansengarie@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New email has coming!" />
