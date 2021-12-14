@@ -91,8 +91,6 @@ class AdminUserController extends Controller
 
         $validatedData = $request->validate($rules);
 
-        $validatedData['is_admin'] = auth()->user()->id;
-
         User::where('username', $user->username)
             ->update($validatedData);
 
@@ -107,8 +105,8 @@ class AdminUserController extends Controller
      */
     public function destroy(User $user)
     {
-        User::destroy($user->username);
+        User::destroy($user->id);
 
-        return redirect('dashboard/users/')->with('success', 'product has been deleted!');
+        return redirect('dashboard/users/')->with('success', 'User has been deleted!');
     }
 }

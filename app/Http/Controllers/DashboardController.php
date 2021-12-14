@@ -19,7 +19,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('pages/dashboard/products/index', [
-            'title' => 'My Furniture',
+            'title' => 'Dashboard',
             'active' => 'my-furniture',
             'products' => Product::where('user_id', auth()->user()->id)->get()
         ]);
@@ -34,7 +34,7 @@ class DashboardController extends Controller
     {
         return view('pages/dashboard/products/create', [
             'categories' => Category::all(),
-            'active' =>  'my-furniture'
+            'active' =>  'products'
         ]);
     }
 
@@ -55,7 +55,7 @@ class DashboardController extends Controller
             'description' => 'required'
         ]);
 
-        if($request->file('image')){
+        if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('product-images');
         }
 
@@ -72,13 +72,13 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Product $product)
-    {   
+    {
         if ($product->author->id !== auth()->user()->id) {
             abort(403);
         }
         return view('pages.dashboard.products.show', [
-            'active' => 'my-furniture',
             'product' => $product,
+            'active' => 'my-furniture',
             'categories' => Category::all()
         ]);
     }
@@ -95,7 +95,6 @@ class DashboardController extends Controller
             abort(403);
         }
         return view('pages.dashboard.products.edit', [
-            'active' => 'my-furniture',
             'product' => $product,
             'categories' => Category::all()
         ]);
@@ -111,9 +110,8 @@ class DashboardController extends Controller
     public function update(Request $request, Product $product)
     {
         $rules = [
-            'name' => 'required|max:255',
+            'title' => 'required|max:255',
             'category_id' => 'required',
-            'price' => 'required',
             'image' => 'image|file|max:1024',
             'description' => 'required'
         ];

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class MyDashboardController extends Controller
             'title' => 'Dashboard',
             'active' => 'dashboard',
             'product' => Product::where('user_id', auth()->user()->id)->count(),
-            'categories'=> Category::all()->count(),
+            'categories' => Category::all()->count(),
             'products' => Product::all()->count()
         ]);
     }
