@@ -30,10 +30,16 @@
         <td>{{ $user->name }}</td>
         <td>{{ $user->username }}</td>
         <td>{{ $user->email }}</td>
-        <td>{{ $user->is_admin }}</td>
-        <td class="d-inline">
+        <td>
+          @if ($user->is_admin == true )
+              Admin
+          @elseif($user->is_admin == false)
+              User
+          @endif
+        </td>
+        <td>
           <a href="users/{{ $user->username }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
-          <form action="users/{{ $user->id }}" method="post" class="d-inline">
+          <form action="users/{{ $user->username }}" method="post" class="d-inline">
             @method('delete')
             @csrf
             <button class="badge bg-danger border-0" onclick="return confirm('Are you sure you want to delete this?')"><i class="bi bi-trash"></i></button>
