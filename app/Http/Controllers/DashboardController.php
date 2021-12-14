@@ -34,7 +34,7 @@ class DashboardController extends Controller
     {
         return view('pages/dashboard/products/create', [
             'categories' => Category::all(),
-            'active' =>  'products'
+            'active' =>  'my-furniture'
         ]);
     }
 
@@ -96,6 +96,7 @@ class DashboardController extends Controller
         }
         return view('pages.dashboard.products.edit', [
             'product' => $product,
+            'active' => 'my-furniture',
             'categories' => Category::all()
         ]);
     }
@@ -110,8 +111,9 @@ class DashboardController extends Controller
     public function update(Request $request, Product $product)
     {
         $rules = [
-            'title' => 'required|max:255',
+            'name' => 'required|max:255',
             'category_id' => 'required',
+            'price' => 'required',
             'image' => 'image|file|max:1024',
             'description' => 'required'
         ];
