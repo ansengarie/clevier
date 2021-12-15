@@ -108,7 +108,7 @@
               <h5 class="card-title">{{ $product->name }}</h5>
               <p>
                 <small class=" text-muted">
-                  <a href="/products?category={{ $products[0]->category->slug }}" class="text-decoration-none">{{ $products[0]->category->name }}</a> {{ $products[0]->created_at->diffForHumans() }}
+                  <a href="/products?category={{ $products[0]->category->slug }}" class="text-decoration-none">{{ $product->category->name }}</a> {{ $products[0]->created_at->diffForHumans() }}
                 </small>
               </p>
               <p class="card-text">IDR {{ number_format($product->price) }}</p>
