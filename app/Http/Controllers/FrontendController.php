@@ -10,7 +10,7 @@ class FrontendController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::query()->inRandomOrder()->limit(6)->get();
+        $products = Product::query()->latest()->limit(6)->get();
         $title = 'Home';
         $active = 'home';
 
@@ -19,6 +19,7 @@ class FrontendController extends Controller
 
     public function products(Request $request)
     {
+        $product = Product::query()->get();
         $title = '';
         if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
@@ -33,7 +34,7 @@ class FrontendController extends Controller
         return view('pages/frontend/products', [
             "title" => "All Products" . $title,
             "active" => 'products',
-            "products" => Product::latest()->filter(request(['search', 'category', 'name']))->paginate(9)->withQueryString()
+            "products" => Product::inRandomOrder()->filter(request(['search', 'category', 'name', 'product']))->paginate(9)->withQueryString()
         ]);
     }
 
