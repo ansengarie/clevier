@@ -1078,3 +1078,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.4s;
 }
 
+@media screen and (max-width: 520px) {
+  .table-responsive {
+    width: 100%;
+  }
+}

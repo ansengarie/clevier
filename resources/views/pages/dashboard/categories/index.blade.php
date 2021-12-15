@@ -11,7 +11,7 @@
 @endif
 
 <div class="table-responsive col-lg-6">
-  <a href="/dashboard/categories/create" class="btn btn-primary mb-3">Create new category</a>
+  <a href="/dashboard/categories/create" class="btn btn-fill mb-3">Create new category</a>
   <table class="table table-striped table-sm">
     <thead>
       <tr>
