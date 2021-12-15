@@ -69,7 +69,7 @@
               <input id="description" type="hidden" name="description" value="{{ old('description') }}">
               <trix-editor input="description"></trix-editor>
             </div>
-            <button type="submit" class="btn btn-primary">Create Products</button>
+            <button type="submit" class="btn btn-fill">Create Products</button>
             </form>
           </div>
         </div>

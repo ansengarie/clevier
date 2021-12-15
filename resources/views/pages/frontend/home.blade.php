@@ -1,10 +1,6 @@
 @extends('layouts/frontend')
 @section('container')
 <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
-  <!-- Back to top button -->
-    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
-      <i class="bi bi-arrow-up-circle"></i>
-    </button>
   <div class="container-xxl mx-auto p-0  position-relative header-2-2">
     <!-- Header -->
     <div>
@@ -20,14 +16,6 @@
             <a class="btn d-inline-flex mb-md-0 btn-try text-white" href="#just-arrived">
               Explore Now
             </a>
-            <button class="btn btn-outline">
-              <div class="d-flex align-items-center">
-                <svg class="me-2" width="13" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.9293 7.99988L6.66668 5.15788V10.8419L10.9293 7.99988ZM12.9173 8.27722L5.85134 12.9879C5.80115 13.0213 5.74283 13.0404 5.6826 13.0433C5.62238 13.0462 5.5625 13.0327 5.50934 13.0042C5.45619 12.9758 5.41175 12.9334 5.38075 12.8817C5.34976 12.83 5.33337 12.7708 5.33334 12.7105V3.28922C5.33337 3.22892 5.34976 3.16976 5.38075 3.11804C5.41175 3.06633 5.45619 3.02398 5.50934 2.99552C5.5625 2.96706 5.62238 2.95355 5.6826 2.95644C5.74283 2.95932 5.80115 2.97848 5.85134 3.01188L12.9173 7.72255C12.963 7.75299 13.0004 7.79423 13.0263 7.84261C13.0522 7.89099 13.0658 7.94501 13.0658 7.99988C13.0658 8.05475 13.0522 8.10878 13.0263 8.15716C13.0004 8.20553 12.963 8.24678 12.9173 8.27722Z" fill="#555B61" />
-                </svg>
-                Watch the video
-              </div>
-            </button>
           </div>
         </div>
         <!-- Right Column -->
@@ -91,8 +79,8 @@
       <div class="row">
         <div class="col-sm-10">
           <p class="sub-headline">
-            Our platform specialize on helping our clients work process and communication. <br>
-            Below are the products produced using our platform.
+            Helping you to find your furniture dreams. <br>
+            Below are the most wanted products produced from our platform.
           </p>
         </div>
         <div class="col-sm-2 d-flex">
@@ -101,16 +89,24 @@
           </a>
         </div>
       </div>
-      <div class="row porto-img">
+      <div class="row porto-img" style="overflow: hidden;">
         <div class="col-md-4">
-          <img src="https://source.unsplash.com/400x600?furniture" style="border-radius: 5%;" class="img-fluid mb-3" />
+          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
+          <img src="https://source.unsplash.com/400x600?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mb-3" />
+          </a>
         </div>
         <div class="col-md-4 d-flex align-items-end flex-column">
-          <img src="https://source.unsplash.com/400x280?interior" style="border-radius: 5%;" class="img-fluid mb-3">
-          <img src="https://source.unsplash.com/400x280?designInterior" style="border-radius: 5%;" class="img-fluid mt-auto mb-3" />
+          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
+          <img src="https://source.unsplash.com/400x280?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mb-4">
+          </a>
+          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
+          <img src="https://source.unsplash.com/400x280?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mt-3 mb-3" />
+          </a>
         </div>
         <div class="col-md-4">
-          <img src="https://source.unsplash.com/400x600?interiorDesign" style="border-radius: 5%;" class="img-fluid mb-3" />
+          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
+          <img src="https://source.unsplash.com/400x600?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mb-3" />
+          </a>
         </div>
       </div>
     </section>
@@ -215,5 +211,10 @@
     </div>
   </div>
   <!-- End OUR PARTNER -->
+
+    <!-- Back to top button -->
+    <button type="button" class="btn btn-fill btn-floating btn-lg" id="btn-back-to-top">
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
 </section>
 @endsection
