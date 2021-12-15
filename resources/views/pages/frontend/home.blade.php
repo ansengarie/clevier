@@ -80,33 +80,25 @@
         <div class="col-sm-10">
           <p class="sub-headline">
             Helping you to find your furniture dreams. <br>
-            Below are the most wanted products produced from our platform.
+            Below are the category products produced from our platform.
           </p>
         </div>
         <div class="col-sm-2 d-flex">
-          <a href="/products" class="link btn btn-fill text-white">
+          <a href="/categories" class="link btn btn-fill text-white">
             See More
           </a>
         </div>
       </div>
       <div class="row porto-img" style="overflow: hidden;">
         <div class="col-md-4">
-          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
-          <img src="https://source.unsplash.com/400x600?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mb-3" />
-          </a>
+          <img src="https://source.unsplash.com/400x600?livingroom" style="border-radius: 5%;" class="img-fluid mb-3" />
         </div>
         <div class="col-md-4 d-flex align-items-end flex-column">
-          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
-          <img src="https://source.unsplash.com/400x280?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mb-4">
-          </a>
-          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
-          <img src="https://source.unsplash.com/400x280?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mt-3 mb-3" />
-          </a>
+          <img src="https://source.unsplash.com/400x280?bedroom" style="border-radius: 5%;" class="img-fluid mb-4">
+          <img src="https://source.unsplash.com/400x280?bathroom" style="border-radius: 5%;" class="img-fluid mt-3 mb-3" />
         </div>
         <div class="col-md-4">
-          <a href="{{ route('details', $product->slug) }}" class="text-decoration-none" style="color: black;">
-          <img src="https://source.unsplash.com/400x600?{{ $product->category->name }}" style="border-radius: 5%;" class="img-fluid mb-3" />
-          </a>
+          <img src="https://source.unsplash.com/400x600?kitchen" style="border-radius: 5%;" class="img-fluid mb-3" />
         </div>
       </div>
     </section>
